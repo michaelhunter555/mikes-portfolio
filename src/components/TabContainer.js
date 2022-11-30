@@ -22,13 +22,13 @@ const TabContainer = (props) => {
             onClick={() => changeTabHandler(1)}
             className={tab === 1 ? "tab active-tab" : "tab"}
           >
-            About Me
+            About
           </div>
           <div
             onClick={() => changeTabHandler(2)}
             className={tab === 2 ? "tab active-tab" : "tab"}
           >
-            Educatation
+            School
           </div>
           <div
             onClick={() => changeTabHandler(3)}
@@ -40,7 +40,7 @@ const TabContainer = (props) => {
             onClick={() => changeTabHandler(4)}
             className={tab === 4 ? "tab active-tab" : "tab"}
           >
-            Work History
+            Work
           </div>
         </div>
 
