@@ -13,10 +13,10 @@
 }
 
 .project-card {
-    background: #1a1919;
     padding: 1.2rem 1rem;
     border: 2px solid rgb(90, 90, 90);
     border-radius: 8px;
+    background: linear-gradient(135deg, hsla(0,0%,100%,.15),hsla(0,0%,100%,.1125) 9.37%, hsla(0,0%,100%,.0375) 54.69%, hsla(0,0%,100%,.0394911) 66.15%,hsla(0,0%,100%,.15));
 
     &:hover {
         border: 2px solid rgb(255, 255, 255);
@@ -25,9 +25,10 @@
     img {
         width: 100%;
         transform: translate(-50,-50);
-        left: 50%;
-        right: 50%;
-        margin: 0.5rem;;
+        left: 50;
+        right: 50;
+        margin: 0.5rem;
+        border-radius: 5px;
     }
 
 
@@ -52,6 +53,14 @@
 
 .p-btns .btn {
     padding: 0.5rem 1rem;
+}
+
+.btn-single {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-align: center;
 }
 
 @media screen and (max-width: 740px) {

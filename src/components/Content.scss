@@ -29,6 +29,7 @@
 
     .right-side {
         max-width: 700px;
+        justify-content:space-evenly;
         display: flex;
         flex-direction: column;
         padding: 1rem;
@@ -47,38 +48,17 @@
     }
 }
 
-.resume-outline {
-        position: relative;
+/*.resume-outline {
         -webkit-backdrop-filter: blur(100px);
         backdrop-filter: blur(100px);
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 10px;
-        border-radius: 6px;
+        transform: translate(-50,-50);
+        left: 50;
+        right: 50;
+        border-radius: 1px;
         background: linear-gradient(135deg, hsla(0,0%,100%,.15),hsla(0,0%,100%,.1125) 9.37%, hsla(0,0%,100%,.0375) 54.69%, hsla(0,0%,100%,.0394911) 66.15%,hsla(0,0%,100%,.15));
         
-}
-
-.education {
-    padding: 1rem;
-    display: flex;
-
-    .bachelors img {
-        width: 50%;
-        margin-left: 4rem;
-
-        p {
-            text-align: center;
-        }
-    }
-
-    .masters img {
-        width: 50%;
-        margin-left: 4.5rem;
-
-        p{
-            text-align: center;
-        }
-    }
-}
+}*/
