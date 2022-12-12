@@ -22,13 +22,13 @@ const TabContainer = (props) => {
             onClick={() => changeTabHandler(1)}
             className={tab === 1 ? "tab active-tab" : "tab"}
           >
-            About Me
+            About
           </div>
           <div
             onClick={() => changeTabHandler(2)}
             className={tab === 2 ? "tab active-tab" : "tab"}
           >
-            Educatation
+            School
           </div>
           <div
             onClick={() => changeTabHandler(3)}
@@ -40,7 +40,7 @@ const TabContainer = (props) => {
             onClick={() => changeTabHandler(4)}
             className={tab === 4 ? "tab active-tab" : "tab"}
           >
-            Work History
+            Work
           </div>
         </div>
 
@@ -53,7 +53,7 @@ const TabContainer = (props) => {
                 : "content-tab-inner"
             }
           >
-            <h2> About Me</h2>
+            <h2> About</h2>
             <p>
               I was born in Queens, Ny and raised in Pennsylvania. I first got
               into tech when I 23/24. At the time, I had taken part in a course
@@ -70,7 +70,7 @@ const TabContainer = (props) => {
                 : "content-tab-inner"
             }
           >
-            <h2>Education</h2>
+            <h2>School</h2>
             <p>
               <b>formal:</b>
             </p>
@@ -118,7 +118,7 @@ const TabContainer = (props) => {
                 : "content-tab-inner"
             }
           >
-            <h2>Work History</h2>
+            <h2>Employed</h2>
             <p>2012 - 2015: English Teacher - Highschool</p>
             <p>2015 - 2021: Owner/Manager - ProFitnessDeals.com</p>
             <p>
