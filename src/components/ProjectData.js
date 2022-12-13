@@ -50,7 +50,7 @@ const ProjectData = [
     title: "solZmirfs NFTs",
     text: "SolZmirfs is fun loving degenerate smirf who loves Solana.",
     view: false,
-    source: "https://www.github.com",
+    source: "https://github.com/idioticbrilliance/solzmirfs",
   },
 ];
 

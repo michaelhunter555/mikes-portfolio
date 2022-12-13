@@ -35,12 +35,14 @@
     .p-title {
     color: white;
     padding: 1rem;
+    text-align: center;
     }
 
     .p-details {
     padding-bottom: 1rem;
     font-size: 1.1rem;
     text-align: justify;
+    text-align:center;
     }
 
 }
@@ -53,6 +55,7 @@
 
 .p-btns .btn {
     padding: 0.5rem 1rem;
+    border-radius: 8px;
 }
 
 .btn-single {
@@ -61,6 +64,8 @@
     align-items: center;
     color: black;
     text-align: center;
+    border-radius:8px;
+
 }
 
 @media screen and (max-width: 740px) {
