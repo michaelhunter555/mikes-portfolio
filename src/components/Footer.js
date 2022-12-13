@@ -57,10 +57,7 @@ const Footer = () => {
             depended on to adapt to a team's needs or work independently.
           </p>
           <div className="social">
-            <a
-              href="https://www.linkedin.com/in/michael-h-hunter"
-              className="linkedIn"
-            >
+            <a href="https://linkedin.com" className="linkedIn">
               <FaLinkedin
                 size={30}
                 style={{
