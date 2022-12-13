@@ -43,7 +43,7 @@ const Footer = () => {
                 My name is Michael Hunter, and I am passionate problem solver from the United States of America. I always accept a challenge and can be depended on to adapt to a team's needs or work independently.
               </p>
               <div className="social">
-                <a href="https://linkedin.com" className="linkedIn">
+                <a href="https://www.linkedin.com/in/michael-h-hunter" className="linkedIn">
               <FaLinkedin
                   size={30}
                   style={{ 
