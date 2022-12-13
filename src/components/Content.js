@@ -18,7 +18,7 @@ const Content = () => {
     <div className="content-container">
       <div className="left-side">
         <h1>Who Am I?</h1>
-        <p>Michael, and I am about this life.</p>
+        <p>Michael, and I find purpose in coding, relationships and family.</p>
         <Link to="/contact">
           <button className="btn">Contact</button>
         </Link>

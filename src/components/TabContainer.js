@@ -11,6 +11,15 @@ const TabContainer = (props) => {
     setTab(index);
   };
 
+  const aboutMe = (
+    <p>
+      I was born in Queens, Ny and raised in Pennsylvania. I first got into tech
+      when I 23/24. At the time, I had taken part in a course to learn
+      high-ticket Dropshipping. Since then and to this day, I have gone on to
+      create and manage various e-commerce websites and blogs
+    </p>
+  );
+
   return (
     <div className="app">
       <div className="mike-img">
@@ -54,13 +63,7 @@ const TabContainer = (props) => {
             }
           >
             <h2> About</h2>
-            <p>
-              I was born in Queens, Ny and raised in Pennsylvania. I first got
-              into tech when I 23/24. At the time, I had taken part in a course
-              to learn high-ticket Dropshipping. Since then and to this day, I
-              have gone on to create and manage various e-commerce websites and
-              blogs
-            </p>
+            {aboutMe}
           </div>
 
           <div
