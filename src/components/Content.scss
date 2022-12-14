@@ -48,17 +48,15 @@
     }
 }
 
-/*.resume-outline {
+.resume-outline {
+        position: relative;
         -webkit-backdrop-filter: blur(100px);
         backdrop-filter: blur(100px);
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 10px;
-        transform: translate(-50,-50);
-        left: 50;
-        right: 50;
-        border-radius: 1px;
+        border-radius: 6px;
         background: linear-gradient(135deg, hsla(0,0%,100%,.15),hsla(0,0%,100%,.1125) 9.37%, hsla(0,0%,100%,.0375) 54.69%, hsla(0,0%,100%,.0394911) 66.15%,hsla(0,0%,100%,.15));
         
-}*/
+}
