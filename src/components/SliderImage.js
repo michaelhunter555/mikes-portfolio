@@ -19,29 +19,7 @@ import CoolLetterHover from '../components/CoolLetterHover';
 
 const SliderImage = () => {
   const [letterHover, setLetterHover] = useState("text-animate");
-  const mySkills = [
-    "R",
-    "e",
-    "a",
-    "c",
-    "t",
-    ".",
-    "J",
-    "S",
-    " ",
-    "D",
-    "e",
-    "v",
-    <div>
-      <a
-        href="https://github.com/idioticbrilliance/mikes-portfolio"
-        rel="noreferrer"
-        target="_blank"
-      >
-        <FaGithub alt="view this code" />
-      </a>
-    </div>,
-  ];
+  const mySkills = ["R", "e", "a", "c", "t", ".", "J", "S", " ", "D", "e", "v"];
 
   useEffect(() => {
     let timeOut = setTimeout(() => {
@@ -94,6 +72,25 @@ const SliderImage = () => {
           <Link to="/contact" className="btn btncontact">
             Contact
           </Link>
+        </div>
+        <div>
+          <a
+            href="https://github.com/idioticbrilliance/mikes-portfolio"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <p
+              style={{
+                fontSize: 13,
+                flex: 1,
+                flexDirection: "row",
+                padding: "1rem",
+              }}
+            >
+              See the code for this portfolio.
+              <FaGithub alt="view this code" />
+            </p>
+          </a>
         </div>
       </div>
     </div>

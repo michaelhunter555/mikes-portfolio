@@ -60,7 +60,7 @@ const Form = () => {
       return;
     }
 
-    //send email with email.js and resent target value
+    //send email with email.js and reset target value
     emailjs
       .sendForm(
         "service_k92fbwa",
