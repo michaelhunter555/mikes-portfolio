@@ -6,6 +6,7 @@ import React, {
 } from 'react';
 
 import {
+  FaGithub,
   FaHtml5,
   FaReact,
   FaSass,
@@ -18,7 +19,29 @@ import CoolLetterHover from '../components/CoolLetterHover';
 
 const SliderImage = () => {
   const [letterHover, setLetterHover] = useState("text-animate");
-  const mySkills = ["R", "e", "a", "c", "t", ".", "J", "S", " ", "D", "e", "v"];
+  const mySkills = [
+    "R",
+    "e",
+    "a",
+    "c",
+    "t",
+    ".",
+    "J",
+    "S",
+    " ",
+    "D",
+    "e",
+    "v",
+    <div>
+      <a
+        href="https://github.com/idioticbrilliance/mikes-portfolio"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <FaGithub alt="view this code" />
+      </a>
+    </div>,
+  ];
 
   useEffect(() => {
     let timeOut = setTimeout(() => {
