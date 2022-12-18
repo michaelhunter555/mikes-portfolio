@@ -10,9 +10,9 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [mobile, setMobile] = useState(false);
-  const handleMobileClick = () => setMobile(!mobile);
-
   const [navScroll, setNavScroll] = useState(false);
+
+  const handleMobileClick = () => setMobile(!mobile);
   const handleNavHover = () => {
     if (window.scrollY >= 100) {
       setNavScroll(true);
