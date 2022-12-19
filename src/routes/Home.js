@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+
+import FeaturedBanner from '../components/FeaturedBanner';
+import Footer from '../components/Footer';
+import MyWork from '../components/MyWork';
 import Navbar from '../components/Navbar';
 import SliderImage from '../components/SliderImage';
-import Footer from '../components/Footer';
 import SmoothTransition from '../components/SmoothTransition';
-import FeaturedBanner from '../components/FeaturedBanner';
-import MyWork from '../components/MyWork';
 
 const Home = () => {
   return (
@@ -15,9 +16,9 @@ const Home = () => {
         <FeaturedBanner />
         <MyWork />
         <Footer />
-        </SmoothTransition>
+      </SmoothTransition>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
