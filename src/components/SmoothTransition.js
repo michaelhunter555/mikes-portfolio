@@ -12,10 +12,11 @@ const SmoothTransition = ({ children }) => {
   return (
     <motion.div
       variants={animationConfiguration}
+      viewport={{ once: true }}
       initial="initial"
       animate="animate"
       exit="exit"
-      transition={{ duration: 0.2 }}
+      transition={{ duration: 0.5 }}
     >
       {children}
     </motion.div>
