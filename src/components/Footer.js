@@ -45,7 +45,7 @@ const Footer = () => {
                 marginRight: "2rem",
               }}
             />
-            <p>Mike@michaelHunter.dev</p>
+            <p>michaelhunterbkk@gmail.com</p>
           </div>
         </div>
 
