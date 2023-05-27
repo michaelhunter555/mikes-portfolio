@@ -1,6 +1,6 @@
-import './Footer.scss';
+import "./Footer.scss";
 
-import React from 'react';
+import React from "react";
 
 import {
   FaGithub,
@@ -8,7 +8,7 @@ import {
   FaLinkedin,
   FaMailBulk,
   FaPhone,
-} from 'react-icons/fa';
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -52,12 +52,15 @@ const Footer = () => {
         <div className="right">
           <h4>About Me</h4>
           <p>
-            My name is Michael Hunter, and I am passionate problem solver from
-            the United States of America. I always accept a challenge and can be
-            depended on to adapt to a team's needs or work independently.
+            My name is Michael Hunter and I'm an easy going American currently
+            living abroad. I'm always happy to chat code, code and meet new
+            people.
           </p>
           <div className="social">
-            <a href="https://linkedin.com" className="linkedIn">
+            <a
+              href="https://www.linkedin.com/in/michael-h-hunter/"
+              className="linkedIn"
+            >
               <FaLinkedin
                 size={30}
                 style={{
@@ -67,7 +70,7 @@ const Footer = () => {
               />
             </a>
             <a
-              href="https://www.github.com/idioticbrilliance"
+              href="https://www.github.com/michaelhunter555"
               className="github"
             >
               <FaGithub

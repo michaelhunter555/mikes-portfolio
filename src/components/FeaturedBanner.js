@@ -1,19 +1,11 @@
-import './FeaturedBanner.scss';
+import "./FeaturedBanner.scss";
 
-import React from 'react';
+import React from "react";
 
-import {
-  FaHtml5,
-  FaReact,
-  FaSass,
-} from 'react-icons/fa';
-import {
-  IoLogoCss3,
-  IoLogoJavascript,
-  IoLogoPython,
-} from 'react-icons/io5';
-import { SiFlask } from 'react-icons/si';
-import { useMediaQuery } from 'react-responsive';
+import { FaNodeJs, FaReact } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io5";
+import { SiExpress, SiMongodb } from "react-icons/si";
+import { useMediaQuery } from "react-responsive";
 
 const mobilePhoneView = {
   size: "30px",
@@ -29,7 +21,7 @@ const FeaturedBanner = () => {
   return (
     <div className="container-experience">
       <div className="border-test"></div>
-      <h1>My Toolbox</h1>
+      <h1>MERN Stack Development</h1>
       <div className="featured-experience__banner">
         <span className="javascript__banner">
           <IoLogoJavascript size={renderIconSize.size} />
@@ -37,22 +29,15 @@ const FeaturedBanner = () => {
         <span className="react__banner">
           <FaReact size={renderIconSize.size} />
         </span>
-        <span className="css__banner">
-          <IoLogoCss3 size={renderIconSize.size} />
+        <span className="node__banner">
+          <FaNodeJs size={renderIconSize.size} />
         </span>
-        <span className="html__banner">
-          <FaHtml5 size={renderIconSize.size} />
-        </span>
-        <span className="scss__banner">
-          {" "}
-          <FaSass size={renderIconSize.size} />
-        </span>
-        <span className="python__banner">
-          <IoLogoPython size={renderIconSize.size} />
-        </span>
-        <div className="flask__banner">
-          <SiFlask size={renderIconSize.size} />
+        <div className="express__banner">
+          <SiExpress size={renderIconSize.size} />
         </div>
+        <span className="mongodb__banner">
+          <SiMongodb size={renderIconSize.size} />
+        </span>
       </div>
     </div>
   );

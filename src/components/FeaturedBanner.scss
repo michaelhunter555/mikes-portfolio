@@ -63,43 +63,29 @@
         }
     }
     
-    .css__banner {
+    .mongodb__banner {
         
         &:hover {
-            color: #264de4;
+            color: #3fa037;
             transition: ease-in 0.3s;
         }
     }
 
-    .html__banner{
+    .node__banner{
     
         &:hover {
-            color: #e34c26;
+            color:  #339933;
             transition: ease-in 0.3s;
         }
     }
 
-    .scss__banner{
+    .express__banner{
         :hover {
-            color: #CD6799;
+            color: #838383;
             transition: ease-in 0.3s;
         }
     }
 
-    .flask__banner{
-        &:hover {
-            color: #d2d2d2;
-            transition: ease-in 0.3s;
-        }
-    }
-
-    .python__banner {
-
-        &:hover {
-            color: #d2d2d2;
-            transition: ease-in 0.3s;
-        }
-    }
     }
 
 

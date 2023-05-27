@@ -1,25 +1,32 @@
-import './SliderImage.scss';
+import "./SliderImage.scss";
 
-import React, {
-  useEffect,
-  useState,
-} from 'react';
+import React, { useEffect, useState } from "react";
 
-import {
-  FaGithub,
-  FaHtml5,
-  FaReact,
-  FaSass,
-} from 'react-icons/fa';
-import { IoLogoJavascript } from 'react-icons/io5';
-import { Link } from 'react-router-dom';
+import { FaGithub, FaHtml5, FaReact, FaSass } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
-import Mike from '../assets/michaelHunter.png';
-import CoolLetterHover from '../components/CoolLetterHover';
+import Mike from "../assets/michaelHunter.png";
+import CoolLetterHover from "../components/CoolLetterHover";
 
 const SliderImage = () => {
   const [letterHover, setLetterHover] = useState("text-animate");
-  const mySkills = ["R", "e", "a", "c", "t", ".", "J", "S", " ", "D", "e", "v"];
+  const mySkills = [
+    "M",
+    "e",
+    "r",
+    "n",
+    "",
+    "S",
+    "t",
+    "a",
+    "c",
+    "k",
+    " ",
+    "D",
+    "e",
+    "v",
+  ];
 
   useEffect(() => {
     let timeOut = setTimeout(() => {
