@@ -1,6 +1,8 @@
-import './Card.scss';
+import "./Card.scss";
 
-import React from 'react';
+import React from "react";
+
+import { FaYoutube } from "react-icons/fa";
 
 const Card = (props) => {
   return (
@@ -16,7 +18,22 @@ const Card = (props) => {
             Demo
           </a>
         )}
-        {!props.view && (
+        {props.youtube && (
+          <a
+            href={props.youtube}
+            style={{
+              backgroundColor: "red",
+              borderRadius: "6px",
+              padding: "6px",
+            }}
+            rel="noreferrer"
+            target="_blank"
+          >
+            Youtube Tour
+            <FaYoutube />
+          </a>
+        )}
+        {!props.view && !props.youtube && (
           <a
             href={props.source}
             className="btn-single"

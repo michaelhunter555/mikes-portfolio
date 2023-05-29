@@ -14,8 +14,8 @@ const ProjectData = [
   {
     imgSrc: ajarnjobs,
     title: "Ajarn Jobs",
-    text: "Fullstack(MERN) Thai ESL jobs board",
-    view: false,
+    text: "Fullstack(MERN) ESL jobs board site",
+    youtube: "https://youtu.be/sfnUQmcMp7w",
     source: "https://github.com/michaelhunter555/ajarn-jobs",
   },
   {
