@@ -1,61 +1,62 @@
-import "./Card.scss";
-
 import React from "react";
 
-import { FaYoutube } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
-const Card = (props) => {
+import {
+  Button,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Divider,
+  Paper,
+  Stack,
+  Typography,
+} from "@mui/material";
+import { styled } from "@mui/material/styles";
+
+const StyledCard = styled(Paper)(({ theme }) => ({
+  borderRadius: "15px",
+  border: "1px solid black",
+}));
+
+const StyledStack = styled(Stack)(({ theme }) => ({
+  padding: 1,
+}));
+
+const CardComponent = (props) => {
   return (
-    <div className="project-card">
-      <img src={props.imgSrc} alt="shopify" />
-      <h2 className="p-title">{props.title}</h2>
-      <div className="p-details">
-        <p>{props.text}</p>
-      </div>
-      <div className={props.view ? "p-btns" : "btn btn-single"}>
-        {props.view && (
-          <a href={props.view} className="btn" rel="noreferrer" target="_blank">
-            Demo
-          </a>
-        )}
-        {props.youtube && (
-          <a
-            href={props.youtube}
-            style={{
-              backgroundColor: "red",
-              borderRadius: "6px",
-              padding: "6px",
-            }}
-            rel="noreferrer"
-            target="_blank"
-          >
-            Youtube Tour
-            <FaYoutube />
-          </a>
-        )}
-        {!props.view && !props.youtube && (
-          <a
-            href={props.source}
-            className="btn-single"
-            rel="noreferrer"
-            target="_blank"
-          >
-            View Github
-          </a>
-        )}
-        {props.view && (
-          <a
-            href={props.source}
-            className="btn"
-            rel="noreferrer"
-            target="_blank"
-          >
-            Github
-          </a>
-        )}
-      </div>
-    </div>
+    <StyledCard elevation={0}>
+      <StyledStack>
+        <CardMedia
+          component="img"
+          image={props.imgSrc}
+          height="100%"
+          alt={`${props.title}-image`}
+          sx={{ borderRadius: "15px 15px 0px 0px" }}
+        />
+        <CardContent>
+          <Stack direction="row" alignItems="center" spacing={2}>
+            <Typography variant="body1" color="black">
+              {props.title}
+            </Typography>
+            {props.stack.map((item, i) => (
+              <Stack key={i} spacing={2}>
+                {item}
+              </Stack>
+            ))}
+          </Stack>
+          <Typography variant="subtitle2" color="text.secondary">
+            {props.text}
+          </Typography>
+        </CardContent>
+        <Divider />
+        <CardActions>
+          <Button startIcon={<FaGithub />}>Github</Button>
+          <Button>Live View</Button>
+        </CardActions>
+      </StyledStack>
+    </StyledCard>
   );
 };
 
-export default Card;
+export default CardComponent;

@@ -1,12 +1,10 @@
-import './Navbar.scss';
+import "./Navbar.scss";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import {
-  FaBars,
-  FaTimes,
-} from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
   const [mobile, setMobile] = useState(false);
@@ -35,14 +33,14 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="link">
-          <Link onClick={handleMobileClick} to="/about">
+          <ScrollLink to="about" smooth={true} duration={500}>
             About
-          </Link>
+          </ScrollLink>
         </li>
         <li className="link">
-          <Link onClick={handleMobileClick} to="/projects">
-            My Work
-          </Link>
+          <ScrollLink to="myWork" smooth={true} duration={500}>
+            MyWork
+          </ScrollLink>
         </li>
         <li className="link">
           <Link onClick={handleMobileClick} to="/contact">

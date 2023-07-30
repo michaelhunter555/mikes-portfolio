@@ -11,15 +11,6 @@
     }
 }
 
-/*
-muedoCode --> \/O\/ if you want to use a background image
-backgroundImage ? (
-    width:100%
-    height: 100%
-    background-size: cover;
-    background-position: center;
-    object-fit: cover;
-    : */
 
 .overlay::after {
     content: "";
@@ -76,15 +67,6 @@ text-align: center;
     }
   }
 
-  /*@keyframes spin {
-    from {
-        transform: scale(1) rotate(0deg);
-    }
-    to {
-        transform: scale(1) rotate(360deg);
-    }
-}*/
-
 .skills-background.shine{
     position: relative;
     -webkit-backdrop-filter: blur(100px);
@@ -93,6 +75,8 @@ text-align: center;
     justify-content: center;
     align-items: center;
     padding: 10px;
+    width: 100%;
+    margin: 0 auto;
     overflow: hidden;
     border-radius: 6px;
     background: linear-gradient(135deg, hsla(0,0%,100%,.15),hsla(0,0%,100%,.1125) 9.37%, hsla(0,0%,100%,.0375) 54.69%, hsla(0,0%,100%,.0394911) 66.15%,hsla(0,0%,100%,.15));
@@ -120,7 +104,7 @@ text-align: center;
         }
 
     .javascript-icon {
-        color: white;
+        color: yellow;
         padding: 0 5px;
         margin-top: 1rem;
     
@@ -130,7 +114,7 @@ text-align: center;
         }
     }
     .react-icon {
-        color: white;
+        color: #61DBFB;
         padding: 0 5px;
         margin-top: 1rem;
     
@@ -141,7 +125,7 @@ text-align: center;
     }
 
     .html-icon {
-        color: white;
+        color: #e34c26;
         padding: 0 5px;
         margin-top: 1rem;
 
@@ -152,7 +136,7 @@ text-align: center;
     }
 
     .scss-icon {
-        color: white;
+        color: #CD6799;
         padding: 0 5px;
         margin-top: 1rem;
 
@@ -177,6 +161,10 @@ text-align: center;
         color: #61DBFB;
         display: inline-flex;
         width: 2rem;
+    }
+
+    .skills-background.shine {
+        width: 100%;
     }
     
 }

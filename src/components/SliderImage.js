@@ -2,21 +2,66 @@ import "./SliderImage.scss";
 
 import React, { useEffect, useState } from "react";
 
-import { FaGithub, FaHtml5, FaReact, FaSass } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { FaGithub, FaReact, FaSass } from "react-icons/fa";
+import { FaAnglesDown } from "react-icons/fa6";
+import { SiJavascript, SiMui } from "react-icons/si";
+import { Link as ScrollLink } from "react-scroll";
 
-import Mike from "../assets/michaelHunter.png";
+import {
+  Box,
+  Button,
+  Divider,
+  Paper,
+  Stack,
+  styled,
+  Typography,
+} from "@mui/material";
+
 import CoolLetterHover from "../components/CoolLetterHover";
+
+const icons = [
+  <FaGithub size={40} />,
+  <SiJavascript
+    size={40}
+    style={{ backgroundColor: "black", color: "yellow" }}
+  />,
+  <FaReact size={40} style={{ color: "#61DBFB" }} />,
+  <FaSass size={40} style={{ color: "#CD6799" }} />,
+  <SiMui size={40} style={{ color: "#007fff" }} />,
+];
+
+const StyledBoxContainer = styled(Box)(({ theme }) => ({
+  height: "100vh",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  flexDirection: "column",
+}));
+
+const StyledBoxWrapper = styled(Box)(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  flexDirection: "column",
+  padding: "2rem",
+  borderRadius: "15px",
+  background: theme.palette.background.paper,
+}));
+
+const StyledPaperIcons = styled(Paper)(({ theme }) => ({
+  display: "flex",
+  width: "100%",
+  justifyContent: "space-evenly",
+  padding: "1rem 1rem",
+}));
 
 const SliderImage = () => {
   const [letterHover, setLetterHover] = useState("text-animate");
   const mySkills = [
-    "M",
-    "e",
-    "r",
-    "n",
-    "",
+    "F",
+    "u",
+    "l",
+    "l",
+    "-",
     "S",
     "t",
     "a",
@@ -28,6 +73,8 @@ const SliderImage = () => {
     "v",
   ];
 
+  const myName = "Michael Hunter".split("");
+
   useEffect(() => {
     let timeOut = setTimeout(() => {
       setLetterHover("text-animate-hover");
@@ -36,71 +83,42 @@ const SliderImage = () => {
   }, []);
 
   return (
-    <div className="home-slide">
-      <div className="overlay">
-        <img className="mike-image" src={Mike} alt="mike" />
-      </div>
-      <div className="content">
-        {/* Center Icons in direct center, right now it 's not so straight... :( */}
-        <p>I'm Mike and I built this with:</p>
-        <div className="skills-background shine">
-          <span className="javascript-icon" alt="javaScript">
-            <IoLogoJavascript />
-          </span>
-          <span className="react-icon">
-            <FaReact />
-          </span>
-          <span className="html-icon">
-            <FaHtml5 />
-          </span>
-          <span className="scss-icon">
-            <FaSass />
-          </span>
-        </div>
+    <StyledBoxContainer>
+      <CoolLetterHover letterHover={`${letterHover}`} arr={myName} idx={1} />
+      <StyledBoxWrapper>
+        <Stack>
+          <Typography sx={{ color: "black" }}>
+            I built this portfolio with
+          </Typography>
+        </Stack>
+        <StyledPaperIcons elevation={2}>
+          {icons.map((item, i) => (
+            <Stack direction="row" key={i}>
+              <Stack>{item}</Stack>
+            </Stack>
+          ))}
+        </StyledPaperIcons>
         <CoolLetterHover
           letterHover={`${letterHover}`}
           arr={mySkills}
-          idx={1}
+          idx={15}
         />
-        <p
-          style={{
-            backgroundColor: "rgb(202 240 255)",
-            color: "black",
-            fontWeight: "bold",
-            borderRadius: "3px",
-          }}
-        >
-          Michael Hezekiah Hunter
-        </p>
-        <div>
-          <Link to="/projects" className="btn">
-            Projects
-          </Link>
-          <Link to="/contact" className="btn btncontact">
-            Contact
-          </Link>
-        </div>
-        <div>
-          <a
-            href="https://github.com/idioticbrilliance/mikes-portfolio"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <p
-              style={{
-                fontSize: 13,
-                flex: 1,
-                flexDirection: "row",
-                padding: "1rem",
-              }}
-            >
-              See the code for this portfolio.
-              <FaGithub alt="view this code" />
-            </p>
-          </a>
-        </div>
-      </div>
-    </div>
+        <Divider flexItem />
+        <Stack direction="row" spacing={2} sx={{ margin: "1rem auto" }}>
+          <Button variant="contained" startIcon={<FaGithub />}>
+            View code
+          </Button>
+          <Button variant="outlined">Contact Me</Button>
+        </Stack>
+      </StyledBoxWrapper>
+      <Stack sx={{ paddingTop: 2 }}>
+        <ScrollLink to="about" duration={500} smooth={true}>
+          <Button sx={{ color: "black" }}>
+            <FaAnglesDown size={100} />
+          </Button>
+        </ScrollLink>
+      </Stack>
+    </StyledBoxContainer>
   );
 };
 
