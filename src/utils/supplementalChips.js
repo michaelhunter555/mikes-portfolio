@@ -157,6 +157,7 @@ export const socialIcons = [
   {
     icon: <FaFacebook size={20} style={{ color: "#1877F2" }} />,
     name: "Facebook",
+    link: "https://www.facebook.com/michael.hunter.902",
   },
 
   {
@@ -169,6 +170,7 @@ export const socialIcons = [
       />
     ),
     name: "LinkedIn",
+    link: "https://www.linkedin.com/in/michael-h-hunter/",
   },
   {
     icon: (
@@ -180,5 +182,6 @@ export const socialIcons = [
       />
     ),
     name: "Telegram",
+    link: "/",
   },
 ];

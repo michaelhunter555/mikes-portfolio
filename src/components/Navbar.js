@@ -33,14 +33,19 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-          <li className="link">
+          <li className="link" onClick={handleMobileClick}>
             <ScrollLink to="about" smooth={true} duration={500}>
               About
             </ScrollLink>
           </li>
           <li className="link">
             <ScrollLink to="myWork" smooth={true} duration={500}>
-              MyWork
+              My Work
+            </ScrollLink>
+          </li>
+          <li className="link">
+            <ScrollLink to="education" smooth={true} duration={500}>
+              Education
             </ScrollLink>
           </li>
           <li className="link">
@@ -105,6 +110,7 @@ const StyledNavbar = styled("div")`
 
   .link {
     position: relative;
+    cursor: pointer;
   }
   .link:hover::before {
     content: "";

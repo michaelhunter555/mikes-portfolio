@@ -16,6 +16,7 @@ import {
 const Education = () => {
   return (
     <Box
+      id="education"
       sx={{
         display: "flex",
         flexDirection: "column",

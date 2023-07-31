@@ -78,20 +78,19 @@ const Form = () => {
 
   return (
     <StyledForm>
-      <Stack justifyContent="center" alignItems="center">
-        {!emailSent && (
-          <Typography variant="subtitle2">
-            Send me a message and I will get back to you within 24hrs. :)
-          </Typography>
-        )}
-        {emailSent && (
-          <Typography variant="subtitle2">
-            Your e-mail has been sent! We'll talk soon!
-          </Typography>
-        )}
-      </Stack>
-
       <form ref={form} onSubmit={onSubmitHandler}>
+        <Stack justifyContent="center" alignItems="center">
+          {!emailSent && (
+            <Typography variant="subtitle2">
+              Send me a message and I will get back to you within 24hrs. :)
+            </Typography>
+          )}
+          {emailSent && (
+            <Typography variant="subtitle2">
+              Your e-mail has been sent! We'll talk soon!
+            </Typography>
+          )}
+        </Stack>
         {!formInputValid.name && (
           <Typography variant="subtitle2">
             please fill in all fields.
@@ -143,7 +142,7 @@ const StyledForm = styled("div")`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1rem 1rem;
+    padding: 8rem 1rem;
     margin: auto;
     max-width: 600px;
 

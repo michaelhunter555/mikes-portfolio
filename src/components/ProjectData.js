@@ -130,7 +130,7 @@ const ProjectData = [
         icon: <SiReact style={{ color: "#61DBFB" }} size={20} />,
       },
     ],
-    text: "Apart of the FreeCodeCamp FrontEnd Challenges. Codepen link available for each completed project.",
+    text: "A part of the FreeCodeCamp FrontEnd Challenges. Codepen link available for each completed project.",
     view: false,
     source: "https://github.com/michaelhunter555/fcc-projects",
   },

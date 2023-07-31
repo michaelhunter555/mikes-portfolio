@@ -45,7 +45,7 @@ const CodingCertifications = () => {
         My Path
       </Typography>
       <Typography color="text.secondary" variant="subtitle2">
-        Supplemntal learning & Certifications{" "}
+        Supplemental learning, Documentation & Certifications.
       </Typography>
       <StyledStackContainer
         direction="row"

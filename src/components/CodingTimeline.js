@@ -22,6 +22,9 @@ const StyledBoxComponent = styled(Box)(({ theme }) => ({
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
+}));
+
+const StyledTimeline = styled(Timeline)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     flexDirection: "column-reverse",
   },
@@ -33,7 +36,7 @@ const CodingTimeline = () => {
       <Typography variant="h4" color="text.secondary">
         A brief timeline of my learning...
       </Typography>
-      <Timeline position="alternate">
+      <StyledTimeline position="alternate">
         <TimelineItem>
           <TimelineOppositeContent
             sx={{ m: "auto 0" }}
@@ -55,9 +58,9 @@ const CodingTimeline = () => {
               Life Passion Found
             </Typography>
             <Typography variant="subtitle2" color="text.secondary">
-              I plan to continue to code, build projects, collaborate and
-              explore. Most importantly, test my ideas and encourage others who
-              are in my position.
+              Continue MERN stack development, build more Fullstack projects
+              with Nextjs & TypeScript, and get closer to making coding my
+              full-time job.
             </Typography>
           </TimelineContent>
         </TimelineItem>
@@ -106,7 +109,7 @@ const CodingTimeline = () => {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              FCC & 300-hour courses
+              600 hours of FCC
             </Typography>
             <Typography variant="subtitle2" color="text.secondary">
               Eventually Codecademy could only take me so far and I was becoming
@@ -174,7 +177,7 @@ const CodingTimeline = () => {
             </Typography>
           </TimelineContent>
         </TimelineItem>
-      </Timeline>
+      </StyledTimeline>
     </StyledBoxComponent>
   );
 };

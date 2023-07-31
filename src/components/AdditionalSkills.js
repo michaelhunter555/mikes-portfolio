@@ -11,8 +11,31 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
+import { styled } from "@mui/material/styles";
 
 import { OtherChips, socialIcons } from "../utils/supplementalChips";
+
+const StyledStack = styled(Stack)(({ theme }) => ({
+  [theme.breakpoints.down("sm")]: {
+    flexWrap: "wrap",
+    flexDirection: "column",
+    alignItems: "flex-end",
+    gap: "5px",
+  },
+}));
+
+const StyledPaper = styled(Paper)(({ theme }) => ({
+  borderRadius: "15px",
+  padding: "2rem",
+  display: "flex",
+  alignItems: "center",
+  flexDirection: "column",
+  maxWidth: "75%",
+  [theme.breakpoints.down("sm")]: {
+    maxWidth: "90%",
+    marginTop: "1.5rem",
+  },
+}));
 
 const AdditionalSkills = () => {
   return (
@@ -20,7 +43,7 @@ const AdditionalSkills = () => {
       container
       direction="row"
       justifyContent="center"
-      sx={{ margin: "2rem auto" }}
+      sx={{ margin: "5rem auto" }}
     >
       <Grid
         item
@@ -33,7 +56,9 @@ const AdditionalSkills = () => {
           flexDirection: "column",
         }}
       >
-        <Typography variant="h2">Worth Mentioning</Typography>
+        <Typography variant="h2" sx={{ textAlign: "center" }}>
+          Worth Mentioning
+        </Typography>
         <Stack
           direction="column"
           alignItems="center"
@@ -50,11 +75,11 @@ const AdditionalSkills = () => {
             sx={{ margin: "0 auto", maxWidth: "80%" }}
           >
             <Typography variant="subtitle2">
-              It was through my early endeavors of blogging, SEO, Shopify and
-              google ads that truly were the factors that pushed me towards this
-              path of coding. I just feel it's necessary to mention this because
-              it's through my years of experience with these platforms that I
-              realized shortcomings that coding could solve.
+              My past experience with blogging, SEO, Shopify and google ads
+              acted as a catalyst in pushing me towards the path of coding. I
+              feel it's necessary to mention this because it's through my years
+              of experience with these platforms that I realized shortcomings
+              that coding could solve.
             </Typography>
           </Stack>
         </Stack>
@@ -71,7 +96,7 @@ const AdditionalSkills = () => {
           flexDirection: "column",
         }}
       >
-        <Paper
+        <StyledPaper
           elevation={0}
           sx={{
             borderRadius: "15px",
@@ -79,7 +104,7 @@ const AdditionalSkills = () => {
             display: "flex",
             alignItems: "center",
             flexDirection: "column",
-            maxWidth: "70%",
+            maxWidth: "75%",
           }}
         >
           <Typography variant="h6">Contact Me</Typography>
@@ -102,7 +127,7 @@ const AdditionalSkills = () => {
                 to="/contact"
                 variant="outlined"
               >
-                Contact me
+                Contact
               </Button>
             </Stack>
             <Divider
@@ -110,18 +135,21 @@ const AdditionalSkills = () => {
               flexItem
               sx={{ margin: "0 1rem" }}
             />
-            <Stack direction="row" alignItems="center" spacing={2}>
+            <StyledStack direction="row" alignItems="center" spacing={2}>
               {socialIcons.map((item, i) => (
                 <Chip
+                  clickable={true}
+                  component="a"
+                  href={item.link}
                   variant="outlined"
                   key={i}
                   label={item.name}
                   icon={item.icon}
                 />
               ))}
-            </Stack>
+            </StyledStack>
           </Stack>
-        </Paper>
+        </StyledPaper>
       </Grid>
     </Grid>
   );
