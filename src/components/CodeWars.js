@@ -26,10 +26,11 @@ const StyledCard = styled("div")(({ theme }) => ({
 }));
 
 const userId = "sleepcoding555";
+const date = new Date();
 
 const CodeWars = () => {
   const [user, setUser] = useState(null);
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
     const getCodeWarsUser = async (userName) => {
@@ -39,7 +40,7 @@ const CodeWars = () => {
 
       if (!response.ok) {
         throw new Error(
-          "Please review your code as there was an issue retreiving data."
+          "Please review your code as there was an issue with retreiving data."
         );
       }
 
@@ -71,8 +72,9 @@ const CodeWars = () => {
                 size="small"
                 variant="outlined"
                 onClick={showKataDataHandler}
+                sx={{ color: "#333", borderColor: "#333" }}
               >
-                {toggle ? "Close Table" : "View My CodeWars Data"}
+                {toggle ? "Close Table" : "CodeWars Stats"}
               </Button>
             </Stack>
           </Grid>
@@ -81,11 +83,11 @@ const CodeWars = () => {
       {toggle && (
         <TableContainer sx={{ margin: "0 auto" }}>
           <Typography
-            sx={{ marginLeft: 2, textDecoration: "underline" }}
-            variant="subtitle1"
+            sx={{ marginLeft: 2, fontSize: 11 }}
+            variant="subtitle2"
             color="text.secondary"
           >
-            Via Codewars Api
+            as of {date.toISOString().split("T")[0]} via CodeWars API
           </Typography>
           <Table>
             <TableHead>

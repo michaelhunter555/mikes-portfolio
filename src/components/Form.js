@@ -1,11 +1,7 @@
-import './Form.scss';
+import React, { useRef, useState } from "react";
 
-import React, {
-  useRef,
-  useState,
-} from 'react';
-
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
+import { Stack, styled, Typography } from "@mui/material";
 
 const isEmpty = (value) => value.trim() === "";
 const messageHasLength = (value) =>
@@ -63,10 +59,10 @@ const Form = () => {
     //send email with email.js and reset target value
     emailjs
       .sendForm(
-        "service_k92fbwa",
-        "template_i2gnk69",
+        process.env.REACT_APP_EMAIL_SERVICE_KEY,
+        process.env.REACT_APP_EMAIL_TEMPLATE,
         form.current,
-        "SBuFh7ItIkdyOwWGq"
+        process.env.REACT_APP_EMAIL_SECRET
       )
       .then(
         (result) => {
@@ -81,18 +77,40 @@ const Form = () => {
   };
 
   return (
-    <div className="form">
-      {!emailSent && (
-        <p>Send me a message and I will get back to you within 24hrs. :)</p>
-      )}
-      {emailSent && <p>Your e-mail has been sent! We'll talk soon!</p>}
+    <StyledForm>
+      <Stack justifyContent="center" alignItems="center">
+        {!emailSent && (
+          <Typography variant="subtitle2">
+            Send me a message and I will get back to you within 24hrs. :)
+          </Typography>
+        )}
+        {emailSent && (
+          <Typography variant="subtitle2">
+            Your e-mail has been sent! We'll talk soon!
+          </Typography>
+        )}
+      </Stack>
 
       <form ref={form} onSubmit={onSubmitHandler}>
-        {!formInputValid.name && <p>please fill in all fields.</p>}
-        {!formInputValid.email && <p>please enter a valid email.</p>}
-        {!formInputValid.subject && <p>please add a subject line.</p>}
+        {!formInputValid.name && (
+          <Typography variant="subtitle2">
+            please fill in all fields.
+          </Typography>
+        )}
+        {!formInputValid.email && (
+          <Typography variant="subtitle2">
+            please enter a valid email.
+          </Typography>
+        )}
+        {!formInputValid.subject && (
+          <Typography variant="subtitle2">
+            please add a subject line.
+          </Typography>
+        )}
         {!formInputValid.message && (
-          <p>messages must be greater than 5 characters.</p>
+          <Typography variant="subtitle2">
+            messages must be greater than 5 characters.
+          </Typography>
         )}
         <label>Name</label>
         <input type="text" name="name" ref={nameInputRef} />
@@ -111,8 +129,34 @@ const Form = () => {
           Submit
         </button>
       </form>
-    </div>
+    </StyledForm>
   );
 };
+
+const StyledForm = styled("div")`
+  label {
+    color: black;
+    margin-bottom: 0.5rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 1rem;
+    margin: auto;
+    max-width: 600px;
+
+    input,
+    textarea {
+      margin-bottom: 1rem;
+      padding: 10px 18px;
+      font-size: 1.2rem;
+      background: rgba(255, 255, 255, 0.7);
+      border-color: rgba(255, 255, 255, 0.7);
+      color: white;
+    }
+  }
+`;
 
 export default Form;

@@ -6,6 +6,7 @@ import { Alert, Divider, Grid, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 import About from "../components/About";
+import AdditionalSkills from "../components/AdditionalSkills";
 import CodingJourney from "../components/CodingJourney";
 import Education from "../components/Education";
 import Footer from "../components/Footer";
@@ -39,7 +40,7 @@ const Home = () => {
           id="about"
         >
           <StyledTypography variant="h2" color="text.secondary">
-            A little about me
+            My Profile
           </StyledTypography>
           <About />
         </Stack>
@@ -89,6 +90,7 @@ const Home = () => {
 
         <CodingJourney />
         <Divider />
+        <AdditionalSkills />
         <Footer />
       </SmoothTransition>
     </div>

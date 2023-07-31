@@ -1,5 +1,3 @@
-import "./SliderImage.scss";
-
 import React, { useEffect, useState } from "react";
 
 import { FaGithub, FaReact, FaSass } from "react-icons/fa";

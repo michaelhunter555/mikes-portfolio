@@ -25,8 +25,8 @@
   padding: 12px 32px;
   font-size: 1rem;
   text-transform: uppercase;
-  background-color: rgb(255, 255, 255);
-  color: rgb(20, 20, 20);
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   border: 1px solid #fff;
   font-weight: 600;
   cursor: pointer;
@@ -34,11 +34,11 @@
 
  .btncontact {
   background: transparent;
-  color: #fff;
+  color: #ffffff;
   transition: 0.3s;
  }
 
  .btn:hover {
-  background-color:rgb(241, 239, 237);
-  color: #000;
+  background-color:rgb(0, 0, 0);
+  color: #ffffff;
  }

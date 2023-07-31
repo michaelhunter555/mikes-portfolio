@@ -22,6 +22,7 @@ const StyledStackContainer = styled(Stack)(({ theme }) => ({
   margin: "1rem auto",
   [theme.breakpoints.down("sm")]: {
     flexWrap: "wrap",
+    gap: "5px",
   },
 }));
 const StyledChip = styled(Chip)(({ theme }) => ({
@@ -41,9 +42,11 @@ const CodingCertifications = () => {
       }}
     >
       <Typography variant="h2" color="text.secondary">
-        What Got Me Here
+        My Path
       </Typography>
-
+      <Typography color="text.secondary" variant="subtitle2">
+        Supplemntal learning & Certifications{" "}
+      </Typography>
       <StyledStackContainer
         direction="row"
         spacing={1}
@@ -55,6 +58,7 @@ const CodingCertifications = () => {
             key={i}
             icon={chip.icon}
             label={chip.name}
+            sx={{ backgroundColor: "#fff" }}
           />
         ))}
       </StyledStackContainer>

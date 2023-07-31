@@ -13,7 +13,7 @@ import ajarnjobs from "../assets/ajarnjobs.png";
 import budsCoffee from "../assets/BudsCoffeefront.png";
 import cryptoPrices from "../assets/crypto-prices.png";
 import expenseTracker from "../assets/expenseTracker.png";
-import markdownPreviewer from "../assets/markdownpreview.png";
+import fcc from "../assets/fcc.png";
 import todoApp from "../assets/todo-app.png";
 
 /**Simpler way to store projects
@@ -122,17 +122,17 @@ const ProjectData = [
     source: "https://github.com/michaelhunter555/todo-app",
   },
   {
-    imgSrc: markdownPreviewer,
-    title: "Markdown Previewer",
+    imgSrc: fcc,
+    title: "FCC Frontend Projects",
     stack: [
       {
         name: "React",
         icon: <SiReact style={{ color: "#61DBFB" }} size={20} />,
       },
     ],
-    text: "Apart of the FreeCodeCamp FrontEnd Challenges",
+    text: "Apart of the FreeCodeCamp FrontEnd Challenges. Codepen link available for each completed project.",
     view: false,
-    source: "https://github.com/michaelhunter555/markdown-previewer",
+    source: "https://github.com/michaelhunter555/fcc-projects",
   },
 ];
 

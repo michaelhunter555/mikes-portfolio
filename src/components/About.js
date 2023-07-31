@@ -7,6 +7,7 @@ import { styled } from "@mui/material/styles";
 
 import { supplementalProfileChips } from "../utils/supplementalChips";
 import { userProfileData } from "../utils/userProfileData";
+import CodeWars from "./CodeWars";
 import SkillsBar from "./SkillsBar";
 
 const StyledGridContainer = styled(Grid)(({ theme }) => ({
@@ -128,6 +129,7 @@ const About = () => {
             />
           ))}
         </Stack>
+        <CodeWars />
       </Grid>
     </StyledGridContainer>
   );
