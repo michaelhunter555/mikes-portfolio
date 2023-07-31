@@ -1,15 +1,15 @@
 import React from "react";
 
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaYoutube } from "react-icons/fa";
 
 import {
   Button,
   CardActions,
   CardContent,
   CardMedia,
-  Divider,
   Paper,
   Stack,
+  Tooltip,
   Typography,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
@@ -30,9 +30,12 @@ const CardComponent = (props) => {
         <CardMedia
           component="img"
           image={props.imgSrc}
-          height="100%"
+          height="300px"
           alt={`${props.title}-image`}
-          sx={{ borderRadius: "15px 15px 0px 0px" }}
+          sx={{
+            borderRadius: "15px 15px 0px 0px",
+            borderBottom: "1px solid black",
+          }}
         />
         <CardContent>
           <Stack direction="row" alignItems="center" spacing={2}>
@@ -41,18 +44,56 @@ const CardComponent = (props) => {
             </Typography>
             {props.stack.map((item, i) => (
               <Stack key={i} spacing={2}>
-                {item}
+                <Tooltip title={item.name} placement="top">
+                  <div>{item.icon}</div>
+                </Tooltip>
               </Stack>
             ))}
           </Stack>
           <Typography variant="subtitle2" color="text.secondary">
-            {props.text}
+            {props.text.length > 200
+              ? props.text.substring(0, 225)
+              : props.text}
           </Typography>
         </CardContent>
-        <Divider />
+
         <CardActions>
-          <Button startIcon={<FaGithub />}>Github</Button>
-          <Button>Live View</Button>
+          {props.view && (
+            <Button
+              size="small"
+              variant="contained"
+              component="a"
+              href={props.view}
+            >
+              View
+            </Button>
+          )}
+
+          {props.source && (
+            <Button
+              size="small"
+              variant="contained"
+              component="a"
+              href={props.source}
+              startIcon={<FaGithub style={{ color: "white" }} />}
+              sx={{ backgroundColor: "black" }}
+            >
+              Github
+            </Button>
+          )}
+
+          {props.youtube && (
+            <Button
+              size="small"
+              variant="outlined"
+              component="a"
+              href={props.youtube}
+              startIcon={<FaYoutube style={{ color: "red" }} />}
+              sx={{ color: "black", borderColor: "black" }}
+            >
+              Youtube
+            </Button>
+          )}
         </CardActions>
       </StyledStack>
     </StyledCard>

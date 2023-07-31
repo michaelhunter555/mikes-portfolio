@@ -2,10 +2,12 @@ import React from "react";
 
 import { LuMilk } from "react-icons/lu";
 
-import { Alert, Grid, Stack, Typography } from "@mui/material";
+import { Alert, Divider, Grid, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 import About from "../components/About";
+import CodingJourney from "../components/CodingJourney";
+import Education from "../components/Education";
 import Footer from "../components/Footer";
 import GitHub from "../components/Github";
 import MyWork from "../components/MyWork";
@@ -82,6 +84,11 @@ const Home = () => {
         </StyledGridContainer>
 
         <MyWork />
+        <Education />
+        <Divider />
+
+        <CodingJourney />
+        <Divider />
         <Footer />
       </SmoothTransition>
     </div>

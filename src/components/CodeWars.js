@@ -44,7 +44,6 @@ const CodeWars = () => {
       }
 
       const data = await response.json();
-      console.log(data);
       setUser(data);
     };
     getCodeWarsUser(userId);

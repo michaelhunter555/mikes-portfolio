@@ -72,6 +72,7 @@ const GitHub = () => {
         setIsLoading(false);
       } catch (error) {
         setIsLoading(false);
+        console.log(`${error.status}--${error.message}`);
         console.error("Error getting the commit count.", error);
       }
     };

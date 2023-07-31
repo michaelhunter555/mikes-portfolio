@@ -2,53 +2,12 @@ import React from "react";
 
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-import { Avatar, Grid, Link, Stack, Typography } from "@mui/material";
+import { Avatar, Chip, Grid, Link, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-import CodeWars from "./CodeWars";
+import { supplementalProfileChips } from "../utils/supplementalChips";
+import { userProfileData } from "../utils/userProfileData";
 import SkillsBar from "./SkillsBar";
-
-const userProfileData = [
-  {
-    field: "Name:",
-    fieldValue: "Michael Hunter",
-    stackDirection: "row",
-    alignPosition: "center",
-    color: "text.secondary",
-    variant: "subtitle1",
-    valueVariant: "subtitle2",
-  },
-  {
-    field: "Location:",
-    fieldValue: "Bangkok, TH",
-    stackDirection: "row",
-    alignPosition: "center",
-    color: "text.secondary",
-    variant: "subtitle1",
-    valueVariant: "subtitle2",
-  },
-  {
-    field: "Nationality",
-    fieldValue: "American",
-
-    stackDirection: "row",
-    alignPosition: "center",
-    color: "text.secondary",
-    variant: "subtitle1",
-    valueVariant: "subtitle2",
-  },
-  {
-    field: "Skills",
-    fieldValue: "React, Express, Node.js, MongoDb, TypeScript",
-    stackDirection: "row",
-    alignPosition: "center",
-    color: "text.secondary",
-    variant: "subtitle1",
-    valueVariant: "subtitle2",
-  },
-];
-//<TH title="Thailand" style={{ width: 20, height: 20}} />
-//<US title="united states" style={{ width: 20, height: 20}} />
 
 const StyledGridContainer = styled(Grid)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
@@ -147,11 +106,28 @@ const About = () => {
             sx={{ fontWeight: 700 }}
             color="text.secondary"
           >
-            My Go-to Stack
+            My Stack
           </Typography>
         </Stack>
         <SkillsBar />
-        <CodeWars />
+        <Stack
+          direction="row"
+          alignItems="center"
+          spacing={1}
+          sx={{ marginTop: "1rem" }}
+        >
+          <Typography variant="subtitle2" color="text.secondary">
+            Additional:
+          </Typography>
+          {supplementalProfileChips.map((item, i) => (
+            <Chip
+              variant="outlined"
+              key={i}
+              icon={item.icon}
+              label={item.name}
+            />
+          ))}
+        </Stack>
       </Grid>
     </StyledGridContainer>
   );
