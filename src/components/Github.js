@@ -112,7 +112,7 @@ const GitHub = () => {
             </Typography>
             <StyledCommitsBox>
               {!isLoading &&
-                gitHubCommits.map((item, i) => (
+                gitHubCommits?.map((item, i) => (
                   <React.Fragment key={i}>
                     <HtmlTooltip title={`${item}`}>
                       <StyledCommitsBox
