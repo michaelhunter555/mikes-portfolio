@@ -1,6 +1,6 @@
 import React from "react";
 
-import { FaCode, FaFreeCodeCamp } from "react-icons/fa6";
+import { FaCode, FaFire, FaFreeCodeCamp } from "react-icons/fa6";
 import { GiBackPain } from "react-icons/gi";
 import { SiCodecademy } from "react-icons/si";
 
@@ -55,12 +55,13 @@ const CodingTimeline = () => {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              Life Passion Found
+              Determined
             </Typography>
             <Typography variant="subtitle2" color="text.secondary">
-              Continue MERN stack development, build more Fullstack projects
-              with Nextjs & TypeScript, and get closer to making coding my
-              full-time job.
+              Deployed AjarnJobs.com and will continue MERN stack development.
+              Build Fullstack projects with Nextjs & TypeScript and continue to
+              learn and test out new ideas. Join a team or collaborate on a
+              project. Attend more code meetups and build network.
             </Typography>
           </TimelineContent>
         </TimelineItem>
@@ -84,13 +85,43 @@ const CodingTimeline = () => {
               Building Real Projects
             </Typography>
             <Typography variant="subtitle2" color="text.secondary">
-              After sometime, I finally started to get my own ideas. About
-              halfway through my FCC frontend projects, I decided to stray off
-              and start building out my ideas. This is without a doubt where the
-              most growth took place.
+              After sometime, concepts and approaches started to click. By
+              adopting and adapting those concepts to bring ideas to life is
+              without a doubt where the most growth took place.
             </Typography>
           </TimelineContent>
         </TimelineItem>
+
+        <TimelineItem>
+          <TimelineOppositeContent
+            sx={{ m: "auto 0" }}
+            variant="subtitle2"
+            color="text.secondary"
+          >
+            Sometime in 2022
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineConnector />
+            <TimelineDot color="error">
+              <FaFire />
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent sx={{ py: "12px", px: 2 }}>
+            <Typography variant="h6" component="span">
+              Escapes Tutorial Hell
+            </Typography>
+            <Typography variant="subtitle2" color="text.secondary">
+              Realized that everyone has their own approach, that code alongs
+              mostly serve for self-validation in the early phases, and that
+              endlessly doing algorithms doesn't equal real world projects. The
+              focus shifted back to the React Library with the aim of gaining a
+              deeper understanding of what exists, why it exists, how it's used,
+              and when it's best used... Time to create something from nothing.
+            </Typography>
+          </TimelineContent>
+        </TimelineItem>
+
         <TimelineItem>
           <TimelineOppositeContent
             sx={{ m: "auto 0" }}
@@ -98,25 +129,23 @@ const CodingTimeline = () => {
             variant="subtitle2"
             color="text.secondary"
           >
-            in 2022...
+            in 2021-2022...
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
             <TimelineDot variant="outlined">
               <FaFreeCodeCamp />
             </TimelineDot>
-            <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
+            <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
               600 hours of FCC
             </Typography>
             <Typography variant="subtitle2" color="text.secondary">
-              Eventually Codecademy could only take me so far and I was becoming
-              compentent enough that the whole idea behind their training was
-              starting to hold me back. So, I moved on to FCC complete two
-              300-hour certification courses while building 5 frontend projects
-              and learning intermediate DSA.
+              Moved on from Codecademy to FCC with the aim to complete two
+              300-hour certifications in Frontend development & Data Structures
+              & Algorithms.
             </Typography>
           </TimelineContent>
         </TimelineItem>
@@ -142,9 +171,9 @@ const CodingTimeline = () => {
               Queue the Codecademy
             </Typography>
             <Typography variant="subtitle2" color="text.secondary">
-              A good friend and mentor advises me to learn html, css, then
-              javaScript. I found it all very complex and perplexing, and
-              Codecademy had the baby steps I needed.
+              Found javaScript very complex and perplexing, and Codecademy
+              provided the resources and approach which served as a soft
+              introduction into programming.
             </Typography>
           </TimelineContent>
         </TimelineItem>
@@ -170,8 +199,8 @@ const CodingTimeline = () => {
               Why did I do that...?
             </Typography>
             <Typography variant="subtitle2" color="text.secondary">
-              I was running a successful e-commerce business, and got an idea
-              for an app. Hired someone on Upwork and...It was a bad experience
+              Running a semi-successful e-commerce business, and had an idea for
+              an app. Hired someone on Upwork and...It was a bad experience
               overall, so determined to never let this happen again, it's time
               to learn how to code.
             </Typography>

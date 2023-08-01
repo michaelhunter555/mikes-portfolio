@@ -33,25 +33,45 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-          <li className="link" onClick={handleMobileClick}>
-            <ScrollLink to="about" smooth={true} duration={500}>
+          <li className="link">
+            <ScrollLink
+              to="about"
+              smooth={true}
+              duration={500}
+              onClick={handleMobileClick}
+            >
               About
             </ScrollLink>
           </li>
           <li className="link">
-            <ScrollLink to="myWork" smooth={true} duration={500}>
+            <ScrollLink
+              to="myWork"
+              smooth={true}
+              duration={500}
+              onClick={handleMobileClick}
+            >
               My Work
             </ScrollLink>
           </li>
           <li className="link">
-            <ScrollLink to="education" smooth={true} duration={500}>
+            <ScrollLink
+              to="education"
+              smooth={true}
+              duration={500}
+              onClick={handleMobileClick}
+            >
               Education
             </ScrollLink>
           </li>
           <li className="link">
-            <Link onClick={handleMobileClick} to="/contact">
+            <ScrollLink
+              onClick={handleMobileClick}
+              to="contact"
+              smooth={true}
+              duration={500}
+            >
               Contact
-            </Link>
+            </ScrollLink>
           </li>
         </ul>
         <div className="hamburger-icon" onClick={handleMobileClick}>

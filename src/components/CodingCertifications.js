@@ -20,6 +20,8 @@ import { supplementalChips } from "../utils/supplementalChips";
 
 const StyledStackContainer = styled(Stack)(({ theme }) => ({
   margin: "1rem auto",
+  flexWrap: "wrap",
+  gap: "5px",
   [theme.breakpoints.down("sm")]: {
     flexWrap: "wrap",
     gap: "5px",

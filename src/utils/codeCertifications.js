@@ -15,6 +15,7 @@ export const codingJourneyTable = [
       <Chip
         component="a"
         href="https://www.freecodecamp.org/certification/MichaelHezekiahHunter/front-end-development-libraries"
+        target="_blank"
         variant="outlined"
         size="small"
         clickable={true}
@@ -38,6 +39,7 @@ export const codingJourneyTable = [
       <Chip
         component="a"
         href="https://www.freecodecamp.org/certification/MichaelHezekiahHunter/javascript-algorithms-and-data-structures"
+        target="_blank"
         variant="outlined"
         size="small"
         clickable={true}
@@ -61,6 +63,7 @@ export const codingJourneyTable = [
       <Chip
         component="a"
         href="https://www.codecademy.com/profiles/farangdam/certificates/458aef4eef5f5130685423fc15e6493d"
+        target="_blank"
         variant="outlined"
         size="small"
         clickable={true}
@@ -84,6 +87,7 @@ export const codingJourneyTable = [
       <Chip
         component="a"
         href="https://www.codecademy.com/profiles/farangdam/certificates/13ffe064f6504262a9e9e3cf76be9bf3"
+        target="_blank"
         variant="outlined"
         size="small"
         clickable={true}
@@ -107,6 +111,7 @@ export const codingJourneyTable = [
       <Chip
         component="a"
         href="https://www.codecademy.com/profiles/farangdam/certificates/af00e5032d0a68cc84879983f5d8333b"
+        target="_blank"
         variant="outlined"
         size="small"
         clickable={true}
@@ -135,6 +140,7 @@ export const codingJourneyTable = [
       <Chip
         component="a"
         href="https://www.codecademy.com/profiles/farangdam/certificates/512386fdc7f6c934f98b01e6afa8285a"
+        target="_blank"
         variant="outlined"
         size="small"
         clickable={true}
@@ -163,6 +169,7 @@ export const codingJourneyTable = [
       <Chip
         component="a"
         href="https://www.codecademy.com/profiles/farangdam/certificates/705dcb15de0da4dd9d9fc4f3274b430e"
+        target="_blank"
         variant="outlined"
         size="small"
         clickable={true}

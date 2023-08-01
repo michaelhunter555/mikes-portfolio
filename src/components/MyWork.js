@@ -43,12 +43,12 @@ const MyWork = () => {
           }}
         >
           <Typography variant="subtitle2" color="text.secondary">
-            Below is a collection of on-going and completed projects, I have
-            completed. If the Github repository link is not available, it means
-            the repository is private. Happy to share upon request. Please note
-            if repository is private, I will provide a site link and youtube
-            video tour.You can view other projects im working on that aren't
-            listed here on my github.
+            Below is a collection of some on going and completed projects. If
+            the Github repository link is not available, it means the repository
+            is private. Happy to share upon request. Please note if repository
+            is private, I will provide a site link and youtube video tour.You
+            can view other projects im working on that aren't listed here on my
+            github.
           </Typography>
           <Stack
             sx={{ marginTop: "1rem" }}

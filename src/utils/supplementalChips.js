@@ -1,13 +1,22 @@
-import { BiLogoFirebase, BiLogoHeroku } from "react-icons/bi";
+import { BiLogoFirebase, BiLogoHeroku, BiLogoTypescript } from "react-icons/bi";
 import { BsStackOverflow, BsTelegram } from "react-icons/bs";
 import {
   FaFacebook,
   FaFreeCodeCamp,
   FaLinkedin,
+  FaReact,
   FaShopify,
 } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
-import { SiCodecademy, SiMui, SiUdemy, SiVercel } from "react-icons/si";
+import {
+  SiCodecademy,
+  SiCodewars,
+  SiLeetcode,
+  SiMui,
+  SiNextdotjs,
+  SiUdemy,
+  SiVercel,
+} from "react-icons/si";
 import { TbBrandVscode, TbSeo } from "react-icons/tb";
 
 export const supplementalChips = [
@@ -73,6 +82,17 @@ export const supplementalChips = [
   },
   {
     icon: (
+      <FaReact
+        size={20}
+        style={{
+          color: "#61DBFB",
+        }}
+      />
+    ),
+    name: "React.dev",
+  },
+  {
+    icon: (
       <TbBrandVscode
         size={20}
         style={{
@@ -81,6 +101,51 @@ export const supplementalChips = [
       />
     ),
     name: "VSCode",
+  },
+  {
+    icon: (
+      <SiNextdotjs
+        size={20}
+        style={{
+          color: "#000",
+        }}
+      />
+    ),
+    name: "Nextjs Docs",
+  },
+  {
+    icon: (
+      <BiLogoTypescript
+        size={20}
+        style={{
+          color: "#3178c6",
+        }}
+      />
+    ),
+    name: "TypeScript Docs",
+  },
+  {
+    icon: (
+      <SiLeetcode
+        size={20}
+        style={{
+          color: "#0078d7",
+        }}
+      />
+    ),
+    name: "Leetcode",
+  },
+  {
+    icon: (
+      <SiCodewars
+        size={20}
+        style={{
+          color: "#000",
+          borderRadius: "50%",
+        }}
+      />
+    ),
+    name: "Codewars",
   },
 ];
 
