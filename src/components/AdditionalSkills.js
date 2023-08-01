@@ -1,5 +1,7 @@
 import React, { useRef, useState } from "react";
 
+import { MdConnectWithoutContact } from "react-icons/md";
+
 import emailjs from "@emailjs/browser";
 import EmailIcon from "@mui/icons-material/Email";
 import {
@@ -42,13 +44,30 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
   },
 }));
 
-const StyledDialogForm = styled(Dialog)({
+const StyledDialogForm = styled(Dialog)(({ theme }) => ({
   borderRadius: "15px !important",
-});
+  [theme.breakpoints.down("sm")]: {
+    display: "flex",
+    justifyContent: "center",
+    width: "100%",
+    "& .MuiPaper-root": {
+      alignItems: "center",
+    },
+  },
+}));
 
-const isEmpty = (value) => value.trim() === "";
-const messageHasLength = (value) =>
-  value.trim() === "" && value.trim().length <= 5;
+const StyledGridContainer = styled(Grid)(({ theme }) => ({
+  [theme.breakpoints.down("sm")]: {
+    display: "flex",
+    alignItems: "center",
+    width: "100%",
+  },
+}));
+
+const isEmail = (value) => /^\S+@\S+\.\S+$/.test(value);
+const isEmpty = (value) => value?.trim() === "";
+const messageIsTooShort = (value) =>
+  value?.trim() === "" && value?.trim()?.length <= 5;
 
 const AdditionalSkills = () => {
   const [openDialog, setOpenDialog] = useState(false);
@@ -58,7 +77,6 @@ const AdditionalSkills = () => {
     email: true,
     message: true,
   });
-
   //create ref for each input on form.
   const form = useRef();
   const nameInputRef = useRef();
@@ -67,6 +85,12 @@ const AdditionalSkills = () => {
 
   const openContactFormHandler = () => {
     setOpenDialog((prev) => !prev);
+
+    setFormInputValid({
+      name: (prev) => !prev,
+      email: (prev) => !prev,
+      message: (prev) => !prev,
+    });
   };
 
   //submit handler function for form
@@ -81,8 +105,9 @@ const AdditionalSkills = () => {
 
     //make sure inputs pass validation
     const nameIsValid = !isEmpty(enteredName);
-    const emailIsvalid = !isEmpty(enteredEmail);
-    const messageIsValid = !messageHasLength(enteredMessage);
+    const emailIsvalid = isEmail(enteredEmail);
+
+    const messageIsValid = !messageIsTooShort(enteredMessage);
 
     //set validataion checkers in setFormInputValid
     setFormInputValid({
@@ -111,14 +136,13 @@ const AdditionalSkills = () => {
         .then(
           (result) => {
             console.log(result.text);
+            setEmailSent(true);
+            e.target.reset();
           },
           (error) => {
             console.log(error.text);
           }
         );
-      setOpenDialog(false);
-      setEmailSent(true);
-      e.target.reset();
     } catch (err) {
       console.log("Error Sending Email", err);
     }
@@ -142,45 +166,77 @@ const AdditionalSkills = () => {
             Your message has been sent! We'll talk soon!
           </DialogContent>
         )}
+        {!formInputValid.name && (
+          <DialogContent variant="subtitle2">
+            Names should be at least one character.
+          </DialogContent>
+        )}
+        {!formInputValid.email && (
+          <DialogContent variant="subtitle2">
+            please enter a valid email.
+          </DialogContent>
+        )}
 
-        <Grid container direction="column" alignItems="center" spacing={2}>
-          <form onSubmit={onSubmitHandler} style={{ width: "90%" }}>
+        {!formInputValid.message && (
+          <DialogContent variant="subtitle2">
+            Messages must be greater than 5 characters.
+          </DialogContent>
+        )}
+
+        <StyledGridContainer
+          container
+          direction="column"
+          alignItems="center"
+          spacing={2}
+        >
+          <form onSubmit={onSubmitHandler} style={{ width: "90%" }} ref={form}>
             <Grid item xs={12}>
-              <FormLabel>Name</FormLabel>
-              <TextField fullWidth type="text" ref={nameInputRef} />
-            </Grid>
-            <Grid item xs={12}>
-              <FormLabel>E-mail</FormLabel>
-              <TextField fullWidth type="text" ref={emailInputRef} />
-            </Grid>
-            <Grid item xs={12}>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>Name*</FormLabel>
               <TextField
+                id="name"
+                name="name"
+                fullWidth
+                type="text"
+                inputRef={nameInputRef}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <FormLabel>E-mail*</FormLabel>
+              <TextField
+                id="email"
+                name="email"
+                fullWidth
+                type="text"
+                inputRef={emailInputRef}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <FormLabel>Message*</FormLabel>
+              <TextField
+                id="message"
+                name="message"
                 fullWidth
                 type="text"
                 multiline
                 rows={4}
-                ref={messageInputRef}
+                inputRef={messageInputRef}
               />
             </Grid>
             <Stack direction="row" spacing={2} sx={{ margin: "2rem 0 1rem 0" }}>
-              <Button
-                variant="contained"
-                type="submit"
-                disabled={!formInputValid}
-              >
+              <Button disabled={emailSent} variant="contained" type="submit">
                 Send
               </Button>
+
               <Button
                 variant="outlined"
                 color="error"
                 onClick={openContactFormHandler}
               >
-                Cancel
+                {emailSent ? "Close" : "Cancel"}
               </Button>
             </Stack>
           </form>
-        </Grid>
+        </StyledGridContainer>
       </StyledDialogForm>
       <Grid
         id="contact"
@@ -228,11 +284,12 @@ const AdditionalSkills = () => {
             </Stack>
           </Stack>
         </Grid>
+        <Divider variant="middle" orientation="vertical" flexItem />
 
         <Grid
           item
           xs={12}
-          sm={6}
+          sm={5}
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -248,10 +305,17 @@ const AdditionalSkills = () => {
               display: "flex",
               alignItems: "center",
               flexDirection: "column",
-              maxWidth: "75%",
+              maxWidth: "70%",
             }}
           >
-            <Typography variant="h6">Contact Me</Typography>
+            <Stack direction="row" alignItems="center" spacing={1}>
+              <Stack>
+                <Typography variant="h6">Contact & Connect</Typography>
+              </Stack>
+              <Stack>
+                <MdConnectWithoutContact size={20} />
+              </Stack>
+            </Stack>
 
             <Typography variant="subtitle2" color="text.secondary">
               If you have any questions or would like to learn more about my
@@ -260,7 +324,7 @@ const AdditionalSkills = () => {
             </Typography>
 
             <Divider flexItem sx={{ marginBottom: "0.5rem" }} />
-            <Stack direction="row">
+            <Stack direction="row" justifyContent="flex-start">
               <Stack justifyContent="center" alignItems="center">
                 <Chip
                   clickable
@@ -277,7 +341,12 @@ const AdditionalSkills = () => {
                 flexItem
                 sx={{ margin: "0 1rem" }}
               />
-              <StyledStack direction="row" alignItems="center" spacing={2}>
+              <StyledStack
+                direction="row"
+                alignItems="center"
+                spacing={2}
+                sx={{ flexWrap: "wrap" }}
+              >
                 {socialIcons.map((item, i) => (
                   <Chip
                     clickable={true}

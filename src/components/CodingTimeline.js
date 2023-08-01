@@ -22,11 +22,17 @@ const StyledBoxComponent = styled(Box)(({ theme }) => ({
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
+  [theme.breakpoints.down("sm")]: {
+    width: "100%",
+  },
 }));
 
 const StyledTimeline = styled(Timeline)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     flexDirection: "column-reverse",
+  },
+  [theme.breakpoints.down("sm")]: {
+    width: "100%",
   },
 }));
 
@@ -109,15 +115,15 @@ const CodingTimeline = () => {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              Escapes Tutorial Hell
+              Escapes Tutorial Purgatory
             </Typography>
             <Typography variant="subtitle2" color="text.secondary">
-              Realized that everyone has their own approach, that code alongs
-              mostly serve for self-validation in the early phases, and that
-              endlessly doing algorithms doesn't equal real world projects. The
-              focus shifted back to the React Library with the aim of gaining a
-              deeper understanding of what exists, why it exists, how it's used,
-              and when it's best used... Time to create something from nothing.
+              Realized that everyone has their own approach, and that code
+              alongs serve as validation for confidence building. Decided that
+              endlessly solving algorithms wouldn't help me build real world
+              projects. The focus shifted back to the React Library with the aim
+              of gaining a deeper understanding of what exists, why it exists,
+              how it's used, and when it's best used.
             </Typography>
           </TimelineContent>
         </TimelineItem>
@@ -144,8 +150,8 @@ const CodingTimeline = () => {
             </Typography>
             <Typography variant="subtitle2" color="text.secondary">
               Moved on from Codecademy to FCC with the aim to complete two
-              300-hour certifications in Frontend development & Data Structures
-              & Algorithms.
+              300-hour certifications in Frontend development and Data
+              Structures & Algorithms.
             </Typography>
           </TimelineContent>
         </TimelineItem>
@@ -168,7 +174,7 @@ const CodingTimeline = () => {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              Queue the Codecademy
+              Start
             </Typography>
             <Typography variant="subtitle2" color="text.secondary">
               Found javaScript very complex and perplexing, and Codecademy
@@ -196,7 +202,7 @@ const CodingTimeline = () => {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              Why did I do that...?
+              Why?
             </Typography>
             <Typography variant="subtitle2" color="text.secondary">
               Running a semi-successful e-commerce business, and had an idea for

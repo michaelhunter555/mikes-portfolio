@@ -85,9 +85,7 @@ const SliderImage = () => {
       <CoolLetterHover letterHover={`${letterHover}`} arr={myName} idx={1} />
       <StyledBoxWrapper>
         <Stack>
-          <Typography sx={{ color: "black" }}>
-            I built this portfolio with
-          </Typography>
+          <Typography sx={{ color: "black" }}>Made possible with:</Typography>
         </Stack>
         <StyledPaperIcons elevation={2}>
           {icons.map((item, i) => (
@@ -103,10 +101,18 @@ const SliderImage = () => {
         />
         <Divider flexItem />
         <Stack direction="row" spacing={2} sx={{ margin: "1rem auto" }}>
-          <Button variant="contained" startIcon={<FaGithub />}>
+          <Button
+            component="a"
+            target="_blank"
+            href="https://www.github.com/michaelhunter555/mikes-portfolio"
+            variant="contained"
+            startIcon={<FaGithub />}
+          >
             View code
           </Button>
-          <Button variant="outlined">Contact Me</Button>
+          <ScrollLink to="contact" duration={500} smooth={true}>
+            <Button variant="outlined">Contact Me</Button>
+          </ScrollLink>
         </Stack>
       </StyledBoxWrapper>
       <Stack sx={{ paddingTop: 2 }}>

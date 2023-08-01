@@ -1,14 +1,12 @@
-import { FaReact } from "react-icons/fa";
-import { SiJavascript } from "react-icons/si";
+import { FaFreeCodeCamp, FaReact } from "react-icons/fa6";
+import { SiCodecademy, SiJavascript } from "react-icons/si";
 
 import { Chip } from "@mui/material";
 
 export const codingJourneyTable = [
   {
     id: 1,
-    learning: (
-      <img alt="fcc" src={`https://logo.clearbit.com/freecodecamp.org`} />
-    ),
+    learning: <FaFreeCodeCamp size={30} />,
     curriculum: "300-hours of Frontend Development Libraries",
     language: <FaReact size={20} style={{ color: "#61DBFB" }} />,
     certificationLink: (
@@ -25,9 +23,7 @@ export const codingJourneyTable = [
   },
   {
     id: 2,
-    learning: (
-      <img alt="fcc" src={`https://logo.clearbit.com/freecodecamp.org`} />
-    ),
+    learning: <FaFreeCodeCamp size={30} />,
     curriculum: "300-hours Data Structures & Algorithms",
     language: (
       <SiJavascript
@@ -50,13 +46,7 @@ export const codingJourneyTable = [
 
   {
     id: 3,
-    learning: (
-      <img
-        alt="codecademy"
-        src={`https://logo.clearbit.com/codecademy.com`}
-        width="25px"
-      />
-    ),
+    learning: <SiCodecademy size={30} />,
     curriculum: "React Native",
     language: <FaReact size={20} style={{ color: "#61DBFB" }} />,
     certificationLink: (
@@ -74,13 +64,7 @@ export const codingJourneyTable = [
 
   {
     id: 4,
-    learning: (
-      <img
-        alt="codecademy"
-        src={`https://logo.clearbit.com/codecademy.com`}
-        width="25px"
-      />
-    ),
+    learning: <SiCodecademy size={30} />,
     curriculum: "Advanced React",
     language: <FaReact size={20} style={{ color: "#61DBFB" }} />,
     certificationLink: (
@@ -98,13 +82,7 @@ export const codingJourneyTable = [
 
   {
     id: 5,
-    learning: (
-      <img
-        alt="codecademy"
-        src={`https://logo.clearbit.com/codecademy.com`}
-        width="25px"
-      />
-    ),
+    learning: <SiCodecademy size={30} />,
     curriculum: "React",
     language: <FaReact size={20} style={{ color: "#61DBFB" }} />,
     certificationLink: (
@@ -122,13 +100,7 @@ export const codingJourneyTable = [
 
   {
     id: 6,
-    learning: (
-      <img
-        alt="codecademy"
-        src={`https://logo.clearbit.com/codecademy.com`}
-        width="25px"
-      />
-    ),
+    learning: <SiCodecademy size={30} />,
     curriculum: "Intermediate JavaScript",
     language: (
       <SiJavascript
@@ -151,13 +123,7 @@ export const codingJourneyTable = [
 
   {
     id: 7,
-    learning: (
-      <img
-        alt="codecademy"
-        src={`https://logo.clearbit.com/codecademy.com`}
-        width="25px"
-      />
-    ),
+    learning: <SiCodecademy size={30} />,
     curriculum: "Basic JavaScript",
     language: (
       <SiJavascript

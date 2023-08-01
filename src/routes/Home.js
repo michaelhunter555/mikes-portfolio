@@ -91,6 +91,7 @@ const Home = () => {
         <CodingJourney />
         <Divider />
         <AdditionalSkills />
+        <Divider />
         <Footer />
       </SmoothTransition>
     </div>

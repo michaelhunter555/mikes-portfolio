@@ -49,7 +49,6 @@ const CodeWars = () => {
     };
     getCodeWarsUser(userId);
   }, []);
-  console.log(user);
 
   const showKataDataHandler = () => {
     setToggle((prev) => !prev);

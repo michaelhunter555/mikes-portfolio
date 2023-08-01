@@ -16,7 +16,7 @@ import { styled } from "@mui/material/styles";
 
 const StyledCard = styled(Paper)(({ theme }) => ({
   borderRadius: "15px",
-  border: "1px solid black",
+  border: "1px solid #bdbdbd",
 }));
 
 const StyledStack = styled(Stack)(({ theme }) => ({
@@ -34,7 +34,7 @@ const CardComponent = (props) => {
           alt={`${props.title}-image`}
           sx={{
             borderRadius: "15px 15px 0px 0px",
-            borderBottom: "1px solid black",
+            borderBottom: "1px solid #bdbdbd",
           }}
         />
         <CardContent>
