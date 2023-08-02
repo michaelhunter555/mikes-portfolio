@@ -5,6 +5,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Avatar, Chip, Grid, Link, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
+import ProfilePhoto from "../assets/profilePhoto.png";
 import { supplementalProfileChips } from "../utils/supplementalChips";
 import { userProfileData } from "../utils/userProfileData";
 import CodeWars from "./CodeWars";
@@ -16,8 +17,6 @@ const StyledGridContainer = styled(Grid)(({ theme }) => ({
     width: "100%",
   },
 }));
-
-const hotLink = "https://avatars.githubusercontent.com/u/101326530?v=4";
 
 const About = () => {
   return (
@@ -42,7 +41,7 @@ const About = () => {
             <Avatar
               sx={{ height: "auto", width: { xs: 100, sm: 200 } }}
               alt="Michael Hunter"
-              src={hotLink}
+              src={ProfilePhoto}
             />
           </Stack>
 
