@@ -5,16 +5,16 @@ import {
   SiNodedotjs,
   SiReact,
   SiTypescript,
-} from "react-icons/si";
-import { TbBrandNextjs } from "react-icons/tb";
+} from 'react-icons/si';
+import { TbBrandNextjs } from 'react-icons/tb';
 
-import aap from "../assets/aap.png";
-import ajarnjobs from "../assets/ajarnjobs.png";
-import budsCoffee from "../assets/BudsCoffeefront.png";
-import cryptoPrices from "../assets/crypto-prices.png";
-import expenseTracker from "../assets/expenseTracker.png";
-import fcc from "../assets/fcc.png";
-import todoApp from "../assets/todo-app.png";
+import aap from '../assets/aap.png';
+import ajarnjobs from '../assets/ajarnjobs.png';
+import budsCoffee from '../assets/BudsCoffeefront.png';
+import cryptoPrices from '../assets/crypto-prices.png';
+import expenseTracker from '../assets/expenseTracker.png';
+import fcc from '../assets/fcc.png';
+import todoApp from '../assets/todo-app.png';
 
 /**Simpler way to store projects
  * Array of ojects
@@ -65,7 +65,7 @@ const ProjectData = [
     ],
     title: "AjarnJobs.com",
     text: "Fullstack(MERN) English teaching jobs board site. Create an account as a user or employer, and experience different features. Backend deployed on Heroku, and frontend on Firebase. Tons of other feautures gone over on Youtube.",
-    youtube: "https://youtu.be/sfnUQmcMp7w",
+    youtube: "https://www.youtube.com/playlist?list=PL9KMyFJi-3vA_ImjreA4DBHyvt7qywbIY",
     view: "https://ajarnjobs.com",
     source: false,
   },
