@@ -39,7 +39,7 @@ const StyledBoxWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   flexDirection: "column",
-  padding: "2rem",
+  padding: "0 2rem 0",
   borderRadius: "15px",
   background: theme.palette.background.paper,
 }));
