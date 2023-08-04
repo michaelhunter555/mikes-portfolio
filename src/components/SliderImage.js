@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { FaGithub, FaReact, FaSass } from "react-icons/fa";
 import { FaAnglesDown } from "react-icons/fa6";
-import { SiJavascript, SiMui } from "react-icons/si";
+import { SiMui, SiVercel } from "react-icons/si";
 import { Link as ScrollLink } from "react-scroll";
 
 import {
@@ -18,14 +18,10 @@ import {
 import CoolLetterHover from "../components/CoolLetterHover";
 
 const icons = [
-  <FaGithub size={40} />,
-  <SiJavascript
-    size={40}
-    style={{ backgroundColor: "black", color: "yellow" }}
-  />,
   <FaReact size={40} style={{ color: "#61DBFB" }} />,
-  <FaSass size={40} style={{ color: "#CD6799" }} />,
   <SiMui size={40} style={{ color: "#007fff" }} />,
+  <FaSass size={40} style={{ color: "#CD6799" }} />,
+  <SiVercel size={40} />,
 ];
 
 const StyledBoxContainer = styled(Box)(({ theme }) => ({
@@ -82,10 +78,17 @@ const SliderImage = () => {
 
   return (
     <StyledBoxContainer>
-      <CoolLetterHover letterHover={`${letterHover}`} arr={myName} idx={1} />
       <StyledBoxWrapper>
+        <CoolLetterHover
+          style={{ fontSize: "1.8rem", padding: 0 }}
+          letterHover={`${letterHover}`}
+          arr={myName}
+          idx={1}
+        />
         <Stack>
-          <Typography sx={{ color: "black" }}>Made possible with:</Typography>
+          <Typography sx={{ color: "black" }}>
+            Built & Hosted this portfolio with:
+          </Typography>
         </Stack>
         <StyledPaperIcons elevation={2}>
           {icons.map((item, i) => (

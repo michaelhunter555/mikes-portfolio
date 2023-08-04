@@ -62,6 +62,7 @@ const CardComponent = (props) => {
             <Button
               size="small"
               variant="contained"
+              target="_blank"
               component="a"
               href={props.view}
             >
@@ -74,6 +75,7 @@ const CardComponent = (props) => {
               size="small"
               variant="contained"
               component="a"
+              target="_blank"
               href={props.source}
               startIcon={<FaGithub style={{ color: "white" }} />}
               sx={{ backgroundColor: "black" }}
@@ -87,6 +89,7 @@ const CardComponent = (props) => {
               size="small"
               variant="outlined"
               component="a"
+              target="_blank"
               href={props.youtube}
               startIcon={<FaYoutube style={{ color: "red" }} />}
               sx={{ color: "black", borderColor: "black" }}

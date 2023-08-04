@@ -1,12 +1,12 @@
-import "./CoolLetterHover.scss";
+import './CoolLetterHover.scss';
 
-import React from "react";
+import React from 'react';
 
-const CoolLetterHover = ({ letterHover, arr, idx }) => {
+const CoolLetterHover = ({ letterHover, arr, idx, style }) => {
   return (
     <span>
       {arr.map((char, i) => (
-        <span key={char + i} className={`${letterHover} _${i + idx}`}>
+        <span key={char + i} style={style} className={`${letterHover} _${i + idx}`}>
           {char}
         </span>
       ))}

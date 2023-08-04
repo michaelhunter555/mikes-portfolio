@@ -100,13 +100,14 @@ const About = () => {
             </Stack>
           </Stack>
         </Stack>
+
         <Stack sx={{ textAlign: "center", marginTop: 1 }}>
           <Typography
             variant="subtitle2"
             sx={{ fontWeight: 700 }}
             color="text.secondary"
           >
-            My Stack
+            Knowledgeability & Core Competencies:
           </Typography>
         </Stack>
         <SkillsBar />
