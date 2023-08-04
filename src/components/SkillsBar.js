@@ -70,7 +70,8 @@ const SkillsBar = () => {
               <Typography color="inherit">MongoDb - Database</Typography>
               <Typography color="text.secondary" paragraph>
                 A non-relational document database that provides me support for
-                Json(BSON) storage
+                Json(BSON) storage. With the mongoose library, we can use OOP to
+                communicate with the database through Node.js.
               </Typography>
               <Link href="https://www.mongodb.com" target="_blank">
                 Visit Website
@@ -112,8 +113,8 @@ const SkillsBar = () => {
               <Typography color="inherit">TypeScript</Typography>
               <Typography color="text.secondary" paragraph>
                 TypeScript features like interface, type aliases, generics,
-                tuples, etc. make our code easier to understand, collaborated
-                with and debugged.{" "}
+                tuples make our code easier to understand, be collaborated with
+                and debug.{" "}
               </Typography>
 
               <Link href="https://typescriptlang.org" target="_blank">
@@ -134,10 +135,10 @@ const SkillsBar = () => {
               <SiReact size={20} style={{ color: "#61DBFB" }} />
               <Typography color="inherit">React</Typography>
               <Typography color="text.secondary" paragraph>
-                React is used for building user-interfaces for web, mobile and
-                desktop apps. I started out with React after gaining competence
-                in vanilla javaScript. As a frontend javaScript library, I am
-                most competent in React.
+                I use React to build user-interfaces for web, mobile and desktop
+                apps. I started out with React after gaining competence in
+                vanilla javaScript. As a frontend javaScript library, I am most
+                competent in React.
               </Typography>
               <Link href="https://react.dev/" target="_blank">
                 Visit Website

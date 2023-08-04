@@ -14,18 +14,23 @@ import { styled } from "@mui/material/styles";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
 
 const StyledCommitsBox = styled(Box)(({ theme }) => ({
-  padding: 3,
+  padding: 5,
   display: "flex",
   flexDirection: "row",
   flexWrap: "wrap",
   gap: "5px",
   boxSizing: "border-box",
+  maxWidth: "80%",
 }));
 
 const StyledBoxContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   maxWidth: "100%",
+  overflow: "hidden",
+  [theme.breakpoints.down("md")]: {
+    boxSizing: "border-box",
+  },
 }));
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
@@ -89,8 +94,8 @@ const GitHub = () => {
       <StyledPaper
         elevation={2}
         sx={{
-          height: { xs: "100%", sm: 300 },
-          width: { xs: "100%", sm: 500 },
+          height: { xs: "100%", sm: "100%" },
+          width: { xs: "100%", sm: "100%" },
           borderRadius: 8,
           display: "flex",
           justifyContent: "center",

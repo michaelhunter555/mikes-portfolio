@@ -7,16 +7,16 @@ import { styled } from "@mui/material/styles";
  * @note - This specific file was adapted from https://codepen.io/ANune/pen/YRagBy spinning cube. Please give this person all the thanks if you use the code. -mike h.
  */
 
-const SpinningCube = () => {
+const SpinningCube = ({ style }) => {
   return (
-    <SpinngCubeStyles>
+    <SpinngCubeStyles sx={style}>
       <div class="cube-spinner">
-        <div class="face face1">1</div>
-        <div class="face face2">2</div>
-        <div class="face face3">3</div>
-        <div class="face face4">4</div>
-        <div class="face face5">5</div>
-        <div class="face face6">6</div>
+        <div class="face face1">Teachable</div>
+        <div class="face face2">Kind</div>
+        <div class="face face3">Easy-going</div>
+        <div class="face face4">Determined</div>
+        <div class="face face5">Passionate</div>
+        <div class="face face6">Genuine</div>
       </div>
     </SpinngCubeStyles>
   );
@@ -38,14 +38,14 @@ const SpinngCubeStyles = styled("div")`
     
   .cube-spinner .face {
       position: absolute;
-      width: 120px;
-      height: 120px;
+      width: 100px;
+      height: 100px;
       border: 1px solid #ccc;
       background: rgba(255,255,255,0.8);
       box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
       text-align: center;
-      line-height: 120px;
-      font-size: 100px;
+      line-height: 100px;
+      font-size: 15px;
     }
   
   

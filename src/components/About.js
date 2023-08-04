@@ -15,6 +15,7 @@ const StyledGridContainer = styled(Grid)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     marginLeft: 0,
     width: "100%",
+    padding: "0 1rem",
   },
 }));
 

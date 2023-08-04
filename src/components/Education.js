@@ -22,8 +22,9 @@ const Education = () => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        maxWidth: "800px",
+        maxWidth: { xs: "100%", sm: "100%", md: "70%", lg: "50%" },
         margin: "5rem auto",
+        padding: "0 1rem",
       }}
     >
       <Typography variant="h2" color="text.secondary">

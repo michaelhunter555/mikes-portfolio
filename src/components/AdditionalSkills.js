@@ -37,7 +37,10 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   flexDirection: "column",
-  maxWidth: "75%",
+  maxWidth: "90%",
+  [theme.breakpoints.down("md")]: {
+    width: "100%",
+  },
   [theme.breakpoints.down("sm")]: {
     maxWidth: "90%",
     marginTop: "1.5rem",
@@ -248,7 +251,7 @@ const AdditionalSkills = () => {
         <Grid
           item
           xs={12}
-          sm={6}
+          sm={5}
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -265,7 +268,11 @@ const AdditionalSkills = () => {
             spacing={1}
             justifyContent="center"
           >
-            <Stack direction="row" spacing={1}>
+            <Stack
+              direction="row"
+              spacing={1}
+              sx={{ flexWrap: "wrap", gap: "5px" }}
+            >
               {OtherChips.map((chip, i) => (
                 <Chip key={i} icon={chip.icon} label={chip.name} />
               ))}
@@ -289,7 +296,7 @@ const AdditionalSkills = () => {
         <Grid
           item
           xs={12}
-          sm={5}
+          sm={6}
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -297,17 +304,7 @@ const AdditionalSkills = () => {
             flexDirection: "column",
           }}
         >
-          <StyledPaper
-            elevation={0}
-            sx={{
-              borderRadius: "15px",
-              padding: "2rem",
-              display: "flex",
-              alignItems: "center",
-              flexDirection: "column",
-              maxWidth: "70%",
-            }}
-          >
+          <StyledPaper elevation={0}>
             <Stack direction="row" alignItems="center" spacing={1}>
               <Stack>
                 <Typography variant="h6">Contact & Connect</Typography>
@@ -344,8 +341,9 @@ const AdditionalSkills = () => {
               <StyledStack
                 direction="row"
                 alignItems="center"
+                justifyContent={{ sm: "flex-start" }}
                 spacing={2}
-                sx={{ flexWrap: "wrap" }}
+                sx={{ flexWrap: "wrap", gap: "5px" }}
               >
                 {socialIcons.map((item, i) => (
                   <Chip

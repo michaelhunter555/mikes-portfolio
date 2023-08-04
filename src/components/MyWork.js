@@ -2,7 +2,7 @@ import React from "react";
 
 import { FaGithub } from "react-icons/fa6";
 
-import { Button, Paper, Stack, Typography } from "@mui/material";
+import { Box, Button, Paper, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 import CardComponent from "./Card";
@@ -32,7 +32,7 @@ const StyledTypography = styled(Typography)`
 
 const MyWork = () => {
   return (
-    <>
+    <Box sx={{ padding: "0 1rem" }}>
       <Stack direction="column" justifyContent="center" alignItems="center">
         <StyledTypography variant="h2" id="myWork">
           Projects
@@ -86,7 +86,7 @@ const MyWork = () => {
           );
         })}
       </StyledDivContainer>
-    </>
+    </Box>
   );
 };
 

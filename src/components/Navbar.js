@@ -40,7 +40,7 @@ const Navbar = () => {
               duration={500}
               onClick={handleMobileClick}
             >
-              About
+              Profile
             </ScrollLink>
           </li>
           <li className="link">
@@ -50,7 +50,7 @@ const Navbar = () => {
               duration={500}
               onClick={handleMobileClick}
             >
-              My Work
+              Projects
             </ScrollLink>
           </li>
           <li className="link">
