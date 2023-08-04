@@ -16,6 +16,10 @@ const StyledDivContainer = styled("div")`
   grid-gap: 40px;
   padding-bottom: 5rem;
 
+  @media screen and (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   @media screen and (max-width: 600px) {
     grid-template-columns: repeat(1, 1fr);
   }

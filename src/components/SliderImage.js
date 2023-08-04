@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-import { FaGithub, FaReact, FaSass } from "react-icons/fa";
+import { FaGithub, FaReact } from "react-icons/fa";
 import { FaAnglesDown } from "react-icons/fa6";
-import { SiMui, SiVercel } from "react-icons/si";
+import { SiJavascript, SiMui, SiVercel } from "react-icons/si";
 import { Link as ScrollLink } from "react-scroll";
 
 import {
@@ -20,7 +20,10 @@ import CoolLetterHover from "../components/CoolLetterHover";
 const icons = [
   <FaReact size={40} style={{ color: "#61DBFB" }} />,
   <SiMui size={40} style={{ color: "#007fff" }} />,
-  <FaSass size={40} style={{ color: "#CD6799" }} />,
+  <SiJavascript
+    size={40}
+    style={{ color: "yellow", backgroundColor: "black" }}
+  />,
   <SiVercel size={40} />,
 ];
 
@@ -87,7 +90,7 @@ const SliderImage = () => {
         />
         <Stack>
           <Typography sx={{ color: "black" }}>
-            Built & Hosted this portfolio with:
+            Built & Hosts this portfolio with:
           </Typography>
         </Stack>
         <StyledPaperIcons elevation={2}>

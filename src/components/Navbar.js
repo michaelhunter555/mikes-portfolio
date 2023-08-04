@@ -87,6 +87,9 @@ const Navbar = () => {
 };
 
 const StyledNavbar = styled("div")`
+  a {
+    text-decoration: none;
+  }
   .header {
     display: flex;
     justify-content: space-between;
