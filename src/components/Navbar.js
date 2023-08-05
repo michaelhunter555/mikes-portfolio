@@ -29,11 +29,6 @@ const Navbar = () => {
 
         <ul className={!mobile ? "nav-menu" : "nav-menu active"}>
           <li className="link">
-            <Link onClick={handleMobileClick} to="/">
-              Home
-            </Link>
-          </li>
-          <li className="link">
             <ScrollLink
               to="about"
               smooth={true}

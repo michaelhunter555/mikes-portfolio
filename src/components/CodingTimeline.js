@@ -65,9 +65,9 @@ const CodingTimeline = () => {
             </Typography>
             <Typography variant="subtitle2" color="text.secondary">
               Deployed AjarnJobs.com and will continue MERN stack development.
-              Build Fullstack projects with Nextjs & TypeScript and continue to
-              learn and test out new ideas. Join a team or collaborate on a
-              project. Attend more code meetups and build network.
+              Exploring Fullstack projects with Nextjs & TypeScript and continue
+              to learn and test out new ideas. Completed FCC Frontend course -
+              May 2023.
             </Typography>
           </TimelineContent>
         </TimelineItem>
@@ -77,7 +77,7 @@ const CodingTimeline = () => {
             variant="subtitle2"
             color="text.secondary"
           >
-            Sometime in 2022
+            Nov - Dec 2022
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -93,7 +93,8 @@ const CodingTimeline = () => {
             <Typography variant="subtitle2" color="text.secondary">
               After sometime, concepts and approaches started to click. By
               adopting and adapting those concepts to bring ideas to life is
-              without a doubt where the most growth took place.
+              without a doubt where the most growth took place. Dives into
+              full-stack javaScript development.
             </Typography>
           </TimelineContent>
         </TimelineItem>
@@ -104,7 +105,7 @@ const CodingTimeline = () => {
             variant="subtitle2"
             color="text.secondary"
           >
-            Sometime in 2022
+            October 2022
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -115,15 +116,14 @@ const CodingTimeline = () => {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              Escapes Tutorial Purgatory
+              Becoming Capable
             </Typography>
             <Typography variant="subtitle2" color="text.secondary">
-              Realized that everyone has their own approach, and that code
-              alongs serve as validation for confidence building. Decided that
-              endlessly solving algorithms wouldn't help me build real world
-              projects. The focus shifted back to the React Library with the aim
-              of gaining a deeper understanding of what exists, why it exists,
-              how it's used, and when it's best used.
+              The focus shifted back to the React Library with the aim of
+              gaining a deeper understanding of what exists, why it exists, how
+              it's used, and when it's best used. Completed 3/5 front end
+              projects for FCC course, started to explore personal ideas and
+              starting own projects.
             </Typography>
           </TimelineContent>
         </TimelineItem>
@@ -149,9 +149,10 @@ const CodingTimeline = () => {
               600 hours of FCC
             </Typography>
             <Typography variant="subtitle2" color="text.secondary">
-              Moved on from Codecademy to FCC with the aim to complete two
-              300-hour certifications in Frontend development and Data
-              Structures & Algorithms.
+              Completed a few courses and Moved on to FCC with the aim to
+              complete 300-hour certifications in Frontend development and Data
+              Structures & Algorithms. Completes DSA course Sept. 2022. Tests
+              understanding through leetcode & codewars.
             </Typography>
           </TimelineContent>
         </TimelineItem>
@@ -163,7 +164,7 @@ const CodingTimeline = () => {
             variant="subtitle2"
             color="text.secondary"
           >
-            in 2020...
+            January 2021
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -177,9 +178,9 @@ const CodingTimeline = () => {
               Start
             </Typography>
             <Typography variant="subtitle2" color="text.secondary">
-              Found javaScript very complex and perplexing, and Codecademy
-              provided the resources and approach which served as a soft
-              introduction into programming.
+              With no real concept of how to start or time/money for bootcamps,
+              Codecademy alongside developer.mozzilla.org's javaScript docs
+              served as a soft introduction into programming.
             </Typography>
           </TimelineContent>
         </TimelineItem>
@@ -191,7 +192,7 @@ const CodingTimeline = () => {
             variant="subtitle2"
             color="text.secondary"
           >
-            August 2019...
+            August 2020
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -205,10 +206,12 @@ const CodingTimeline = () => {
               Why?
             </Typography>
             <Typography variant="subtitle2" color="text.secondary">
-              Running a semi-successful e-commerce business, and had an idea for
-              an app. Hired someone on Upwork and...It was a bad experience
-              overall, so determined to never let this happen again, it's time
-              to learn how to code.
+              Running a semi-successful shopify website. Was comfortable with
+              shopify liquid and HTML & CSS, but had no grasp of javaScript.
+              feeling limited in that sense, decided it was time to embark on a
+              journey to master a programming language. Starts researching and
+              deciding on programming language to learn before eventually
+              settling on javaScript.
             </Typography>
           </TimelineContent>
         </TimelineItem>
