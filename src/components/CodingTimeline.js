@@ -175,13 +175,9 @@ const CodingTimeline = () => {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              Start
+              Structured Learning
             </Typography>
-            <Typography variant="subtitle2" color="text.secondary">
-              With no real concept of how to start or time/money for bootcamps,
-              Codecademy alongside developer.mozzilla.org's javaScript docs
-              served as a soft introduction into programming.
-            </Typography>
+            <Typography variant="subtitle2" color="text.secondary"></Typography>
           </TimelineContent>
         </TimelineItem>
 
@@ -211,7 +207,7 @@ const CodingTimeline = () => {
               feeling limited in that sense, decided it was time to embark on a
               journey to master a programming language. Starts researching and
               deciding on programming language to learn before eventually
-              settling on javaScript.
+              settling on JavaScript & React.
             </Typography>
           </TimelineContent>
         </TimelineItem>
