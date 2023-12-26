@@ -10,7 +10,7 @@ export const userProfileData = [
   },
   {
     field: "Location:",
-    fieldValue: "Bangkok, TH",
+    fieldValue: "Bowie, Md",
     stackDirection: "row",
     alignPosition: "center",
     color: "text.secondary",
