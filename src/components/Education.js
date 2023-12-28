@@ -75,9 +75,7 @@ const Education = () => {
                 </Typography>
               </TableCell>
               <TableCell>
-                <Typography color="text.secondary">
-                  Comm Arts/Advertising
-                </Typography>
+                <Typography color="text.secondary">Communications</Typography>
               </TableCell>
               <TableCell>
                 <Typography color="text.secondary">May 2012</Typography>
