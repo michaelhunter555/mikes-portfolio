@@ -12,12 +12,12 @@ const StyledDivContainer = styled("div")`
   max-width: 1200px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: 40px;
   padding-bottom: 5rem;
 
   @media screen and (max-width: 900px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 
   @media screen and (max-width: 600px) {
@@ -47,12 +47,9 @@ const MyWork = () => {
           }}
         >
           <Typography variant="subtitle2" color="text.secondary">
-            Below is a collection of some on going and completed projects. If
-            the Github repository link is not available, it means the repository
-            is private. Happy to share upon request. Please note if repository
-            is private, I will provide a site link and youtube video tour.You
-            can view other projects im working on that aren't listed here on my
-            github.
+            Below are two successfully completed passion projects that I built
+            myself, and continue to develop and improve. Repositories are
+            private, but both apps are live!
           </Typography>
           <Stack
             sx={{ marginTop: "1rem" }}
@@ -65,7 +62,7 @@ const MyWork = () => {
               href="https://github.com/michaelhunter555"
               startIcon={<FaGithub />}
             >
-              Visit my Github
+              View my other work
             </Button>
           </Stack>
         </Paper>

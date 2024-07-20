@@ -115,8 +115,8 @@ const About = () => {
         <Stack
           direction="row"
           alignItems="center"
-          spacing={1}
-          sx={{ marginTop: "1rem" }}
+          spacing={2}
+          sx={{ margin: "1rem ", flexWrap: "wrap", gap: "3px" }}
         >
           <Typography variant="subtitle2" color="text.secondary">
             Additional:

@@ -1,21 +1,7 @@
 import React from "react";
 
-import {
-  Box,
-  Chip,
-  Paper,
-  Stack,
-  styled,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Typography,
-} from "@mui/material";
+import { Box, Chip, Stack, styled, Typography } from "@mui/material";
 
-import { codingJourneyTable } from "../utils/codeCertifications";
 import { supplementalChips } from "../utils/supplementalChips";
 
 const StyledStackContainer = styled(Stack)(({ theme }) => ({
@@ -39,15 +25,16 @@ const CodingCertifications = () => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        maxWidth: "800px",
+        maxWidth: { xs: "100%", md: "60%" },
         margin: "5rem auto",
       }}
     >
       <Typography variant="h2" color="text.secondary">
-        My Path
+        Places I Frequent
       </Typography>
       <Typography color="text.secondary" variant="subtitle2">
-        Supplemental learning, Documentation & Certifications.
+        Supplemental learning, reading documentation & contiously reafirming and
+        advancing my learning.
       </Typography>
       <StyledStackContainer
         direction="row"
@@ -60,11 +47,14 @@ const CodingCertifications = () => {
             key={i}
             icon={chip.icon}
             label={chip.name}
-            sx={{ backgroundColor: "#fff" }}
+            sx={{
+              backgroundColor: "#fff",
+              fontSize: "1rem",
+            }}
           />
         ))}
       </StyledStackContainer>
-      <TableContainer component={Paper} sx={{ borderRadius: "15px" }}>
+      {/* <TableContainer component={Paper} sx={{ borderRadius: "15px" }}>
         <Table>
           <TableHead>
             <TableRow>
@@ -106,7 +96,7 @@ const CodingCertifications = () => {
             )}
           </TableBody>
         </Table>
-      </TableContainer>
+      </TableContainer> */}
     </Box>
   );
 };

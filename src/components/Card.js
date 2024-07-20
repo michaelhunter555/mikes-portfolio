@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { FaGithub, FaYoutube } from "react-icons/fa";
 
 import {
+  Box,
   Button,
   CardActions,
   CardContent,
@@ -14,39 +15,20 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-const StyledLiveDot = styled('div')`
-
-.ring-container {
-  position: relative;
-}
-
-.circle {
-  width: 15px;
-  height: 15px;
-  background-color: #62bd19;
-  border-radius: 50%;
-  position: absolute;
-  top: 23px;
-  left: 23px;
-}
-
-.ringring {
-  border: 3px solid #62bd19;
-  -webkit-border-radius: 30px;
-  height: 25px;
-  width: 25px;
-  position: absolute;
-  left: 15px;
-  top: 15px;
-  -webkit-animation: pulsate 1s ease-out;
-  -webkit-animation-iteration-count: infinite; 
-  opacity: 0.0
-}
-@-webkit-keyframes pulsate {
-  0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
-  50% {opacity: 1.0;}
-  100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
-}`
+export const FadeContentBox = styled(Box)(({ theme }) => ({
+  position: "relative",
+  maxHeight: 150,
+  overflow: "hidden",
+  "&:after": {
+    content: '""',
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    right: 0,
+    height: "3em",
+    background: `linear-gradient(to top, ${theme.palette.background.paper}, transparent)`,
+  },
+}));
 
 const StyledCard = styled(Paper)(({ theme }) => ({
   borderRadius: "15px",
@@ -58,19 +40,26 @@ const StyledStack = styled(Stack)(({ theme }) => ({
 }));
 
 const CardComponent = (props) => {
+  const [readMore, setReadMore] = useState(false);
+
+  const handleReadMore = () => setReadMore((prev) => !prev);
+
   return (
     <StyledCard elevation={0}>
-      <StyledStack>
+      <Stack>
         <CardMedia
           component="img"
           image={props.imgSrc}
-          height="300px"
+          height="auto"
+          width="400px"
           alt={`${props.title}-image`}
           sx={{
             borderRadius: "15px 15px 0px 0px",
             borderBottom: "1px solid #bdbdbd",
           }}
         />
+      </Stack>
+      <StyledStack>
         <CardContent>
           <Stack direction="row" alignItems="center" spacing={2}>
             <Typography variant="body1" color="black">
@@ -84,53 +73,74 @@ const CardComponent = (props) => {
               </Stack>
             ))}
           </Stack>
-          <Typography variant="subtitle2" color="text.secondary">
-            {props.text.length > 200
-              ? props.text.substring(0, 225)
-              : props.text}
-          </Typography>
+          {readMore ? (
+            <Typography
+              variant="subtitle2"
+              color="text.secondary"
+              dangerouslySetInnerHTML={{ __html: props.text }}
+            />
+          ) : (
+            <FadeContentBox>
+              <Typography
+                variant="subtitle2"
+                color="text.secondary"
+                dangerouslySetInnerHTML={{ __html: props.text }}
+              />
+            </FadeContentBox>
+          )}
+          <Button size="small" sx={{ fontSize: 10 }} onClick={handleReadMore}>
+            {readMore ? "Read less" : "Read more"}
+          </Button>
         </CardContent>
 
-        <CardActions>
-          {props.view && (
-            <Button
-              size="small"
-              variant="contained"
-              target="_blank"
-              component="a"
-              href={props.view}
-            >
-              View
-            </Button>
-          )}
+        <CardActions sx={{ width: "100%", borderTop: "1px solid #12121217" }}>
+          <Stack
+            direction="row"
+            alignItems="center"
+            justifyContent={"flex-end"}
+            spacing={2}
+            sx={{ width: "100%" }}
+          >
+            {props.view && (
+              <Button
+                size="small"
+                variant="contained"
+                target="_blank"
+                component="a"
+                href={props.view}
+              >
+                View
+              </Button>
+            )}
 
-          {props.source && (
-            <Button
-              size="small"
-              variant="contained"
-              component="a"
-              target="_blank"
-              href={props.source}
-              startIcon={<FaGithub style={{ color: "white" }} />}
-              sx={{ backgroundColor: "black" }}
-            >
-              Github
-            </Button>
-          )}
+            {props.source && (
+              <Button
+                size="small"
+                variant="contained"
+                component="a"
+                target="_blank"
+                href={props.source}
+                startIcon={<FaGithub style={{ color: "white" }} />}
+                sx={{ backgroundColor: "black" }}
+              >
+                Github
+              </Button>
+            )}
 
-          {props.youtube && (
-            <Button
-              size="small"
-              variant="outlined"
-              component="a"
-              target="_blank"
-              href={props.youtube}
-              startIcon={<FaYoutube style={{ color: "red" }} />}
-              sx={{ color: "black", borderColor: "black" }}
-            >
-              Youtube
-            </Button>
-          )}
+            {props.youtube && (
+              <Button
+                size="small"
+                variant="outlined"
+                component="a"
+                target="_blank"
+                href={props.youtube}
+                startIcon={<FaYoutube style={{ color: "red" }} />}
+                sx={{ color: "black", borderColor: "black" }}
+              >
+                Youtube
+              </Button>
+            )}
+          </Stack>
         </CardActions>
       </StyledStack>
     </StyledCard>

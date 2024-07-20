@@ -1,7 +1,7 @@
 import { BiLogoFirebase, BiLogoHeroku, BiLogoTypescript } from "react-icons/bi";
-import { BsStackOverflow, BsTelegram } from "react-icons/bs";
+import { BsStackOverflow } from "react-icons/bs";
+import { FaGithub, FaRust } from "react-icons/fa";
 import {
-  FaFacebook,
   FaFreeCodeCamp,
   FaLinkedin,
   FaReact,
@@ -20,19 +20,6 @@ import {
 import { TbBrandVscode, TbSeo } from "react-icons/tb";
 
 export const supplementalChips = [
-  {
-    icon: (
-      <FaFreeCodeCamp
-        size={20}
-        style={{
-          color: "white",
-          backgroundColor: "black",
-          borderRadius: "50%",
-        }}
-      />
-    ),
-    name: "FreeCodeCamp",
-  },
   {
     icon: (
       <BsStackOverflow
@@ -147,6 +134,42 @@ export const supplementalChips = [
     ),
     name: "Codewars",
   },
+  {
+    icon: <FcGoogle size={20} />,
+    name: "Google Ads Api Forum",
+  },
+  {
+    icon: (
+      <FaShopify
+        size={20}
+        style={{
+          color: " #96bf48",
+        }}
+      />
+    ),
+    name: "MyFireDirect.com",
+  },
+  {
+    icon: <FaGithub size={20} style={{ color: "#000" }} />,
+    name: "Github",
+  },
+  {
+    icon: <FaRust style={{ color: "#000" }} size={20} />,
+    name: "Rustlings & Rust Docs",
+  },
+  {
+    icon: (
+      <FaFreeCodeCamp
+        size={20}
+        style={{
+          color: "white",
+          backgroundColor: "black",
+          borderRadius: "50%",
+        }}
+      />
+    ),
+    name: "FreeCodeCamp",
+  },
 ];
 
 export const supplementalProfileChips = [
@@ -187,6 +210,21 @@ export const supplementalProfileChips = [
     ),
     name: "Vercel",
   },
+  {
+    icon: (
+      <FaShopify
+        size={20}
+        style={{
+          color: " #96bf48",
+        }}
+      />
+    ),
+    name: "Shopify dev",
+  },
+  {
+    icon: <FcGoogle size={20} />,
+    name: "Google Ads Api",
+  },
 ];
 
 export const OtherChips = [
@@ -220,12 +258,6 @@ export const OtherChips = [
 
 export const socialIcons = [
   {
-    icon: <FaFacebook size={20} style={{ color: "#1877F2" }} />,
-    name: "Facebook",
-    link: "https://www.facebook.com/michael.hunter.902",
-  },
-
-  {
     icon: (
       <FaLinkedin
         size={20}
@@ -238,15 +270,8 @@ export const socialIcons = [
     link: "https://www.linkedin.com/in/michael-h-hunter/",
   },
   {
-    icon: (
-      <BsTelegram
-        size={20}
-        style={{
-          color: "#0088CC",
-        }}
-      />
-    ),
-    name: "Telegram",
-    link: "/",
+    icon: <FaGithub size={20} />,
+    name: "Github",
+    link: "https://www.github.com/michaelhunter555",
   },
 ];
