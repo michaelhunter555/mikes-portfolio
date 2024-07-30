@@ -18,10 +18,14 @@ const StyledDivContainer = styled("div")`
 
   @media screen and (max-width: 900px) {
     grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    width: 90%;
   }
 
   @media screen and (max-width: 600px) {
     grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    width: 90%;
   }
 `;
 
