@@ -67,20 +67,23 @@ const Education = () => {
                 <Typography color="text.secondary">Bachelors</Typography>
               </TableCell>
               <TableCell>
-                <Avatar src={`https://logo.clearbit.com/temple.edu`}></Avatar>
+                <Avatar src={`https://logo.clearbit.com/wgu.edu`}></Avatar>
               </TableCell>
               <TableCell>
                 <Typography color="text.secondary">
-                  Temple University
+                  Western Governors University
                 </Typography>
               </TableCell>
               <TableCell>
-                <Typography color="text.secondary">Communications</Typography>
+                <Typography color="text.secondary">
+                  Software Engineering
+                </Typography>
               </TableCell>
               <TableCell>
-                <Typography color="text.secondary">May 2012</Typography>
+                <Typography color="text.secondary">Current</Typography>
               </TableCell>
             </TableRow>
+
             <TableRow>
               <TableCell>
                 <Typography color="text.secondary">Masters</Typography>
@@ -100,6 +103,25 @@ const Education = () => {
               </TableCell>
               <TableCell>
                 <Typography color="text.secondary">Sept 2020</Typography>
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>
+                <Typography color="text.secondary">Bachelors</Typography>
+              </TableCell>
+              <TableCell>
+                <Avatar src={`https://logo.clearbit.com/temple.edu`}></Avatar>
+              </TableCell>
+              <TableCell>
+                <Typography color="text.secondary">
+                  Temple University
+                </Typography>
+              </TableCell>
+              <TableCell>
+                <Typography color="text.secondary">Communications</Typography>
+              </TableCell>
+              <TableCell>
+                <Typography color="text.secondary">May 2012</Typography>
               </TableCell>
             </TableRow>
           </TableBody>
