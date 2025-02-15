@@ -80,7 +80,9 @@ const Education = () => {
                 </Typography>
               </TableCell>
               <TableCell>
-                <Typography color="text.secondary">Current</Typography>
+                <Typography color="text.secondary">
+                  Start April 2025*
+                </Typography>
               </TableCell>
             </TableRow>
 
