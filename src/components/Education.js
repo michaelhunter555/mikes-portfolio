@@ -67,7 +67,7 @@ const Education = () => {
                 <Typography color="text.secondary">Bachelors</Typography>
               </TableCell>
               <TableCell>
-                <Avatar src={`https://logo.clearbit.com/wgu.edu`}></Avatar>
+                <Avatar src={`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDxQRRjiG1vRq4IFxO85cs2Yt_vTXuFZwV5Q&s`}></Avatar>
               </TableCell>
               <TableCell>
                 <Typography color="text.secondary">
@@ -81,7 +81,7 @@ const Education = () => {
               </TableCell>
               <TableCell>
                 <Typography color="text.secondary">
-                  Start April 2025*
+                  April 2025 - Present
                 </Typography>
               </TableCell>
             </TableRow>

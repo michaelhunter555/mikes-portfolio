@@ -2,7 +2,8 @@ import React from "react";
 
 import { LuMilk } from "react-icons/lu";
 
-import { Alert, Divider, Grid, Stack, Typography } from "@mui/material";
+import { Alert, Divider, Grid, Stack, Typography, useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import { styled } from "@mui/material/styles";
 
 import About from "../components/About";
@@ -28,6 +29,15 @@ const StyledTypography = styled(Typography)(({ theme }) => ({
 }));
 
 const Home = () => {
+  const theme = useTheme();
+  const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
+  const isSmUp = useMediaQuery(theme.breakpoints.up("sm"));
+  const iframeDims = isMdUp
+    ? { width: 560, height: 315 }
+    : isSmUp
+    ? { width: 480, height: 270 }
+    : { width: 320, height: 180 };
+
   return (
     <div>
       <SmoothTransition>
@@ -43,6 +53,17 @@ const Home = () => {
             My Profile
           </StyledTypography>
           <About />
+        </Stack>
+        <Stack sx={{ marginBottom: 2}} alignItems="center" justifyContent="center">
+        <StyledTypography variant="h4" color="text.secondary">
+            Recent YT videos
+          </StyledTypography>
+          <Stack sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: { xs: 'column', md: 'row' }, gap: 2}}>
+
+          <iframe width={iframeDims.width} height={iframeDims.height} src="https://www.youtube.com/embed/VYoTBOFhJQc?si=Hfb0KL0DhIyyD480" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          <iframe width={iframeDims.width} height={iframeDims.height} src="https://www.youtube.com/embed/MAsIi7F-nAo?si=H3m6i6jWxCDjdi1g" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          </Stack>
+
         </Stack>
         <StyledGridContainer
           container

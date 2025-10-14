@@ -6,11 +6,13 @@ import {
   SiNodedotjs,
   SiReact,
   SiTypescript,
+  SiExpo
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 
-import ajarnjobs from "../assets/ajarn-home.svg";
+import ajarnjobs from "../assets/ajarnjobs_dash.png";
 import queryLevel from "../assets/create-tiers-light.svg";
+import barberApp from '../assets/barber_app_home_phones.png'
 
 /**Simpler way to store projects
  * Array of ojects
@@ -18,6 +20,39 @@ import queryLevel from "../assets/create-tiers-light.svg";
  */
 
 const ProjectData = [
+  {
+    imgSrc: barberApp,
+    stack: [
+      {
+        name: "Expo",
+        icon: <SiExpo size={20} />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript style={{ color: "#3178c6" }} />,
+      },
+      {
+        name: "Express",
+        icon: <SiExpress style={{ color: "#999" }} size={20} />,
+      },
+      {
+        name: "Nodejs",
+        icon: <SiNodedotjs style={{ color: "#3C873A" }} size={20} />,
+      },
+      {
+        name: "MongoDb",
+        icon: <SiMongodb style={{ color: "#3FA037" }} size={20} />,
+      },
+      {
+        name: "Stripe",
+        icon: <FaStripe style={{ color: "#6B71E3" }} size={30} />,
+      },
+    ],
+    title: "Barber App Marketplace",
+    height: 600,
+    text: "Android & iOS App<br/><h4>Key Features</h4><ul><li><strong>Find Local Barbers</strong> - Discover licensed barbers and stylists near you using interactive maps and location-based search</li><li><strong>Book Appointments</strong> - Schedule haircuts with real-time availability, add-on services, and flexible payment options</li><li><strong>House Call Services</strong> - Book barbers for in-home visits with distance-based pricing and location tracking</li><li><strong>Coupon & Rewards System</strong> - Earn points from completed appointments to purchase app-level discounts and barber-specific coupons</li><li><strong>Secure Payments</strong> - Integrated Stripe payments with multiple payment methods, tips, and automatic fee calculations</li><li><strong>Review & Rating System</strong> - Rate barbers on cleanliness, punctuality, and overall experience with photo uploads</li><li><strong>Real-time Messaging</strong> - Direct communication between clients and barbers with support chat functionality</li><li><strong>Barber Dashboard</strong> - Providers manage schedules, view earnings, track performance, and handle booking confirmations</li><li>iOS & Google Maps for Nearby barber discovery via geo search</li><li>Stripe subscriptions, payouts, invoices</li><li>In-app chat, bookings, notifications</li></ul>",
+    source: false,
+  },
   {
     imgSrc: queryLevel,
     stack: [

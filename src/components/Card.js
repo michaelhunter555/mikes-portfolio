@@ -50,12 +50,15 @@ const CardComponent = (props) => {
         <CardMedia
           component="img"
           image={props.imgSrc}
-          height="auto"
-          width="400px"
           alt={`${props.title}-image`}
           sx={{
             borderRadius: "15px 15px 0px 0px",
             borderBottom: "1px solid #bdbdbd",
+            width: "100%",
+            height: "auto",
+            objectFit: "contain",
+            margin: "0 auto",
+            maxHeight: { xs: props.height || "none" },
           }}
         />
       </Stack>

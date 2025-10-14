@@ -77,6 +77,8 @@ const MyWork = () => {
             <CardComponent
               key={i}
               imgSrc={project.imgSrc}
+              height={project.height}
+              width={project.width}
               title={project.title}
               text={project.text}
               view={project.view}
