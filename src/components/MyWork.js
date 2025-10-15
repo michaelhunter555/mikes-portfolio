@@ -51,9 +51,9 @@ const MyWork = () => {
           }}
         >
           <Typography variant="subtitle2" color="text.secondary">
-            Below are two successfully completed passion projects that I built
+            Below are successfully completed passion projects that I built
             myself, and continue to develop and improve. Repositories are
-            private, but both apps are live!
+            private, but if you are an employer/recruiter and want to see them, please contact me!
           </Typography>
           <Stack
             sx={{ marginTop: "1rem" }}
