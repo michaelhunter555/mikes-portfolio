@@ -136,7 +136,7 @@ const CardComponent = (props) => {
                 variant="contained"
                 component="a"
                 target="_blank"
-                href={props.source}
+                href={props.ios}
                 startIcon={<FaApple style={{ color: "white" }} />}
                 sx={{ backgroundColor: "black" }}
               >
@@ -150,7 +150,7 @@ const CardComponent = (props) => {
                 variant="contained"
                 component="a"
                 target="_blank"
-                href={props.source}
+                href={props.android}
                 startIcon={<FaAndroid style={{ color: "white" }} />}
                 sx={{ backgroundColor: "#0070A9" }}
               >
