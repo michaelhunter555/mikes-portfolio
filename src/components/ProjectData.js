@@ -13,6 +13,7 @@ import { TbBrandNextjs } from "react-icons/tb";
 import ajarnjobs from "../assets/ajarnjobs_dash.png";
 import queryLevel from "../assets/create-tiers-light.svg";
 import barberApp from '../assets/barber_app_home_phones.png'
+import nextFade from '../assets/nextfade.png'
 
 /**Simpler way to store projects
  * Array of ojects
@@ -21,7 +22,7 @@ import barberApp from '../assets/barber_app_home_phones.png'
 
 const ProjectData = [
   {
-    imgSrc: barberApp,
+    imgSrc: nextFade,
     stack: [
       {
         name: "Expo",
@@ -48,10 +49,12 @@ const ProjectData = [
         icon: <FaStripe style={{ color: "#6B71E3" }} size={30} />,
       },
     ],
-    title: "Barber App Marketplace",
+    title: "Next Fade - Barber App Marketplace",
     height: 600,
     text: "Android & iOS App<br/><h4>Key Features</h4><ul><li><strong>Find Local Barbers</strong> - Discover licensed barbers and stylists near you using interactive maps and location-based search</li><li><strong>Book Appointments</strong> - Schedule haircuts with real-time availability, add-on services, and flexible payment options</li><li><strong>House Call Services</strong> - Book barbers for in-home visits with distance-based pricing and location tracking</li><li><strong>Coupon & Rewards System</strong> - Earn points from completed appointments to purchase app-level discounts and barber-specific coupons</li><li><strong>Secure Payments</strong> - Integrated Stripe payments with multiple payment methods, tips, and automatic fee calculations</li><li><strong>Review & Rating System</strong> - Rate barbers on cleanliness, punctuality, and overall experience with photo uploads</li><li><strong>Real-time Messaging</strong> - Direct communication between clients and barbers with support chat functionality</li><li><strong>Barber Dashboard</strong> - Providers manage schedules, view earnings, track performance, and handle booking confirmations</li><li>iOS & Google Maps for Nearby barber discovery via geo search</li><li>Stripe subscriptions, payouts, invoices</li><li>In-app chat, bookings, notifications</li></ul>",
     source: false,
+    ios: "https://apps.apple.com/us/app/next-fade/id6755074770",
+    android: "https://play.google.com/store/apps/details?id=com.anonymous.bmorebarber",
   },
   {
     imgSrc: queryLevel,
@@ -81,7 +84,8 @@ const ProjectData = [
     title: "QueryLevel.com",
     text: "*Production Approved* <br /> <h4>Purpose</h4> Query Level is a Google Shopping Ads app targeting e-commerce vendors. As an e-commerce vendor in the past, I came across a very powerful marketing strategy that required a series of steps in structuring your Google Shopping campaigns.<br /> <h4> The strategy </h4> The strategy creates a filter-like system that allows you to bid high on buy-phase keywords and low on interest-level queries. <br /> <h4> The Problem </h4>The problem with the strategy is it requires you to create negative keywords and carefully structure your campaigns. One mistake and you could be seeing some unusual or unintended performance. Moreover, if you have hundreds of products for each brand you carry, the manual work of creating negative keywords within the constraints of Google is painstaking and long. <br /> <h4> The Solution </h4>This app solves all of that in a few clicks. Users can simply connect to the app, choose the brand they want to create the structured campaigns for, configure some specific settings like cost per click, location and bid separations, and click 'create campaigns' and they're done. This app provides a centralized Google ads Shopping experience. App is CRUD equipped for shopping campaigns, conversions, search terms, and Stripe for subscriptions.",
 
-    view: "https://querylevel.com",
+    view: "https://github.com/michaelhunter555/querylevel-backend",
+    source: " https://github.com/michaelhunter555/querylevel-frontend"
   },
   {
     imgSrc: ajarnjobs,

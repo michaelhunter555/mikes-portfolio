@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { FaGithub, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaYoutube, FaApple, FaAndroid } from "react-icons/fa";
 
 import {
   Box,
@@ -127,6 +127,34 @@ const CardComponent = (props) => {
                 sx={{ backgroundColor: "black" }}
               >
                 Github
+              </Button>
+            )}
+
+{props.ios && (
+              <Button
+                size="small"
+                variant="contained"
+                component="a"
+                target="_blank"
+                href={props.source}
+                startIcon={<FaApple style={{ color: "white" }} />}
+                sx={{ backgroundColor: "black" }}
+              >
+                App Store
+              </Button>
+            )}
+
+{props.android && (
+              <Button
+                size="small"
+                variant="contained"
+                component="a"
+                target="_blank"
+                href={props.source}
+                startIcon={<FaAndroid style={{ color: "white" }} />}
+                sx={{ backgroundColor: "#0070A9" }}
+              >
+                Google Play
               </Button>
             )}
 

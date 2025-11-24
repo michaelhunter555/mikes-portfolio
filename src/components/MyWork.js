@@ -85,6 +85,8 @@ const MyWork = () => {
               youtube={project.youtube}
               source={project.source}
               stack={project.stack}
+              ios={project.ios}
+              android={project.android}
             />
           );
         })}
