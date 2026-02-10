@@ -89,41 +89,50 @@ const StyledNavbar = styled("div")`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    border-bottom: 1px solid rgb(0, 0, 0);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     position: fixed;
     width: 100%;
     z-index: 10;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
   }
 
   .header-scroll {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    border-bottom: 1px solid rgb(0, 0, 0);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     position: fixed;
     width: 100%;
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   }
 
   .nav-menu {
     display: flex;
+    gap: 0.5rem;
   }
 
   .nav-menu li {
-    padding: 0 1rem;
+    padding: 0 0.75rem;
     list-style: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.7);
   }
 
   .nav-menu li a {
-    font-size: 15px;
-    font-weight: 600;
-    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.2s ease;
+  }
+
+  .nav-menu li a:hover {
+    color: #ffffff;
   }
 
   .link {
@@ -134,13 +143,11 @@ const StyledNavbar = styled("div")`
     content: "";
     position: absolute;
     top: 100%;
-    width: 70%;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    right: 50%;
-    height: 4px;
-    border-radius: 2px;
-    background: linear-gradient(111.3deg, #9c27b0 9.6%, #00bcd4 93.6%);
+    width: 100%;
+    left: 0;
+    height: 2px;
+    border-radius: 1px;
+    background: #ffffff;
   }
 
   .hamburger-icon {
@@ -149,7 +156,10 @@ const StyledNavbar = styled("div")`
 
   .site-name {
     position: relative;
-    color: white;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
   }
   .site-name::before {
     content: "";
@@ -157,25 +167,29 @@ const StyledNavbar = styled("div")`
     top: 100%;
     width: 100%;
     left: 0;
-    height: 4px;
-    border-radius: 3px;
-    background: linear-gradient(111.3deg, #9c27b0, #00bcd4 93.6%);
-    color: white;
+    height: 2px;
+    border-radius: 1px;
+    background: #ffffff;
   }
 
   @media screen and (max-width: 1040px) {
+    .header, .header-scroll {
+      padding: 1rem;
+    }
+
     .nav-menu {
       flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 100%;
       height: 100vh;
-      background: rgba(0, 0, 0, 0.95);
+      background: rgba(0, 0, 0, 0.98);
       position: absolute;
       top: 0;
       left: -100%;
       z-index: -3;
-      transition: 0.7s ease-in;
+      transition: 0.3s ease-in;
+      gap: 0;
     }
 
     .nav-menu.active {
@@ -184,11 +198,12 @@ const StyledNavbar = styled("div")`
     }
 
     .nav-menu li {
-      padding: 1rem 0;
+      padding: 1.5rem 0;
     }
 
     .nav-menu li a {
-      font-size: 2rem;
+      font-size: 1.5rem;
+      color: rgba(255, 255, 255, 0.9);
     }
 
     .hamburger-icon {

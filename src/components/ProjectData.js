@@ -52,7 +52,7 @@ const ProjectData = [
     title: "Next Fade - Barber App Marketplace",
     height: 600,
     text: "Android & iOS App<br/><h4>Key Features</h4><ul><li><strong>Find Local Barbers</strong> - Discover licensed barbers and stylists near you using interactive maps and location-based search</li><li><strong>Book Appointments</strong> - Schedule haircuts with real-time availability, add-on services, and flexible payment options</li><li><strong>House Call Services</strong> - Book barbers for in-home visits with distance-based pricing and location tracking</li><li><strong>Coupon & Rewards System</strong> - Earn points from completed appointments to purchase app-level discounts and barber-specific coupons</li><li><strong>Secure Payments</strong> - Integrated Stripe payments with multiple payment methods, tips, and automatic fee calculations</li><li><strong>Review & Rating System</strong> - Rate barbers on cleanliness, punctuality, and overall experience with photo uploads</li><li><strong>Real-time Messaging</strong> - Direct communication between clients and barbers with support chat functionality</li><li><strong>Barber Dashboard</strong> - Providers manage schedules, view earnings, track performance, and handle booking confirmations</li><li>iOS & Google Maps for Nearby barber discovery via geo search</li><li>Stripe subscriptions, payouts, invoices</li><li>In-app chat, bookings, notifications</li></ul>",
-    source: false,
+    view: "https://www.nextfade.co",
     ios: "https://apps.apple.com/us/app/next-fade/id6755074770",
     android: "https://play.google.com/store/apps/details?id=com.anonymous.bmorebarber",
   },
@@ -119,7 +119,7 @@ const ProjectData = [
     text: "<h4>Desire to build something meaningful</h4> While working at an international University in Thailand, I had been thinking for a few days what kind of project I could build that would be both unique in its intention and relatable to my profession as a lecturer as well as my transitioning into becoming a developer. <h4>jobs for teachers</h4> Ajarn jobs is a English teaching jobs board that takes a very niche angle aiming to focus only on English teaching jobs. <h4>How it works</h4> There are two types of users, Teachers and Employers, which based offer two very different dashboard experience as well as app experience. <h5>Teachers</h5> Teachers can create profiles, build resumes, apply to jobs, (CRUD) manage their applications, post and interact with content, and respond to recruitment offers. <h5>Employers</h5> Employers can (CRUD) manage jobs & featured jobs, recruitments, applicants, content, view teacher profiles, purchase credits to create jobs and teacher-buffets. Teacher buffets are timed segments where employers can view all currently active teachers and recruit them to apply for open positions. Once the window is closed, access is locked off. Employers can purchase segments of 24 hours, 7 days, 14 days and 1 month. The hope here is that it becomes easier for others to find a job and not rely on the few options out there at the moment. <h4>Solutions</h4> Ajarn jobs offers variety in the job finding hustle and gives employers on budget an affordable posting option.",
 
     view: "https://ajarnjobs.com",
-    source: false,
+    source: "https://github.com/michaelhunter555/ajarn-jobs",
   },
   // {
   //   imgSrc: budsCoffee,

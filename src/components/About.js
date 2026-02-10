@@ -29,11 +29,12 @@ const About = () => {
     >
       <Grid
         sx={{
-          backgroundColor: "#fff",
-          borderRadius: 7,
-          border: "1px solid #303030",
-          padding: 1,
+          backgroundColor: "rgba(255, 255, 255, 0.02)",
+          borderRadius: "12px",
+          border: "1px solid rgba(255, 255, 255, 0.1)",
+          padding: 3,
           marginTop: 3,
+          backdropFilter: "blur(10px)",
         }}
       >
         {/*profile */}
@@ -50,8 +51,7 @@ const About = () => {
             {userProfileData.map((val, i) => (
               <Stack key={i} direction="row" alignItems="center" spacing={1}>
                 <Typography
-                  sx={{ fontWeight: 700 }}
-                  color="text.secondary"
+                  sx={{ fontWeight: 600, color: "#ffffff" }}
                   variant="subtitle1"
                 >
                   {val.field}
@@ -64,7 +64,7 @@ const About = () => {
                     gap: "5px",
                   }}
                 >
-                  <Typography color="text.secondary" variant="subtitle2">
+                  <Typography sx={{ color: "rgba(255, 255, 255, 0.7)" }} variant="subtitle2">
                     {val.fieldValue}{" "}
                   </Typography>
                 </Stack>
@@ -72,14 +72,13 @@ const About = () => {
             ))}
             <Stack direction="row" alignItems="center" spacing={1}>
               <Typography
-                sx={{ fontWeight: 700 }}
-                color="text.secondary"
+                sx={{ fontWeight: 600, color: "#ffffff" }}
                 variant="subtitle1"
               >
                 <FaGithub />
               </Typography>
-              <Typography color="text.secondary" variant="subtitle2">
-                <Link href="https://github.com/michaelhunter555">
+              <Typography sx={{ color: "rgba(255, 255, 255, 0.7)" }} variant="subtitle2">
+                <Link href="https://github.com/michaelhunter555" sx={{ color: "rgba(255, 255, 255, 0.7)", "&:hover": { color: "#ffffff" } }}>
                   github.com/michaelhunter555
                 </Link>
               </Typography>
@@ -87,14 +86,13 @@ const About = () => {
 
             <Stack direction="row" alignItems="center" spacing={1}>
               <Typography
-                sx={{ fontWeight: 700 }}
-                color="text.secondary"
+                sx={{ fontWeight: 600, color: "#ffffff" }}
                 variant="subtitle1"
               >
                 <FaLinkedin />
               </Typography>
-              <Typography color="text.secondary" variant="subtitle2">
-                <Link href="https://linkedin.com/in/michael-h-hunter">
+              <Typography sx={{ color: "rgba(255, 255, 255, 0.7)" }} variant="subtitle2">
+                <Link href="https://linkedin.com/in/michael-h-hunter" sx={{ color: "rgba(255, 255, 255, 0.7)", "&:hover": { color: "#ffffff" } }}>
                   linkedin.com/in/michael-h-hunter
                 </Link>
               </Typography>
@@ -102,11 +100,10 @@ const About = () => {
           </Stack>
         </Stack>
 
-        <Stack sx={{ textAlign: "center", marginTop: 1 }}>
+        <Stack sx={{ textAlign: "center", marginTop: 2 }}>
           <Typography
             variant="subtitle2"
-            sx={{ fontWeight: 700 }}
-            color="text.secondary"
+            sx={{ fontWeight: 600, color: "#ffffff" }}
           >
             Knowledgeability & Core Competencies:
           </Typography>
@@ -118,7 +115,7 @@ const About = () => {
           spacing={2}
           sx={{ margin: "1rem ", flexWrap: "wrap", gap: "3px" }}
         >
-          <Typography variant="subtitle2" color="text.secondary">
+          <Typography variant="subtitle2" sx={{ color: "#ffffff", fontWeight: 600 }}>
             Additional:
           </Typography>
           {supplementalProfileChips.map((item, i) => (
@@ -127,6 +124,14 @@ const About = () => {
               key={i}
               icon={item.icon}
               label={item.name}
+              sx={{
+                borderColor: "rgba(255, 255, 255, 0.2)",
+                color: "rgba(255, 255, 255, 0.8)",
+                "&:hover": {
+                  borderColor: "rgba(255, 255, 255, 0.4)",
+                  backgroundColor: "rgba(255, 255, 255, 0.05)",
+                },
+              }}
             />
           ))}
         </Stack>

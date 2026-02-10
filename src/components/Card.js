@@ -26,13 +26,21 @@ export const FadeContentBox = styled(Box)(({ theme }) => ({
     left: 0,
     right: 0,
     height: "3em",
-    background: `linear-gradient(to top, ${theme.palette.background.paper}, transparent)`,
+    background: `linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent)`,
   },
 }));
 
 const StyledCard = styled(Paper)(({ theme }) => ({
-  borderRadius: "15px",
-  border: "1px solid #bdbdbd",
+  borderRadius: "12px",
+  border: "1px solid rgba(255, 255, 255, 0.1)",
+  background: "rgba(255, 255, 255, 0.02)",
+  backdropFilter: "blur(10px)",
+  transition: "all 0.3s ease",
+  "&:hover": {
+    borderColor: "rgba(255, 255, 255, 0.2)",
+    transform: "translateY(-4px)",
+    boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2)",
+  },
 }));
 
 const StyledStack = styled(Stack)(({ theme }) => ({
@@ -52,8 +60,8 @@ const CardComponent = (props) => {
           image={props.imgSrc}
           alt={`${props.title}-image`}
           sx={{
-            borderRadius: "15px 15px 0px 0px",
-            borderBottom: "1px solid #bdbdbd",
+            borderRadius: "12px 12px 0px 0px",
+            borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
             width: "100%",
             height: "auto",
             objectFit: "contain",
@@ -65,7 +73,7 @@ const CardComponent = (props) => {
       <StyledStack>
         <CardContent>
           <Stack direction="row" alignItems="center" spacing={2}>
-            <Typography variant="body1" color="black">
+            <Typography variant="body1" sx={{ color: "#ffffff", fontWeight: 600 }}>
               {props.title}
             </Typography>
             {props.stack.map((item, i) => (
@@ -79,24 +87,33 @@ const CardComponent = (props) => {
           {readMore ? (
             <Typography
               variant="subtitle2"
-              color="text.secondary"
+              sx={{ color: "rgba(255, 255, 255, 0.7)", lineHeight: 1.6 }}
               dangerouslySetInnerHTML={{ __html: props.text }}
             />
           ) : (
             <FadeContentBox>
               <Typography
                 variant="subtitle2"
-                color="text.secondary"
+                sx={{ color: "rgba(255, 255, 255, 0.7)", lineHeight: 1.6 }}
                 dangerouslySetInnerHTML={{ __html: props.text }}
               />
             </FadeContentBox>
           )}
-          <Button size="small" sx={{ fontSize: 10 }} onClick={handleReadMore}>
+          <Button 
+            size="small" 
+            sx={{ 
+              fontSize: 12, 
+              color: "rgba(255, 255, 255, 0.6)",
+              "&:hover": { color: "#ffffff" },
+              textTransform: "none",
+            }} 
+            onClick={handleReadMore}
+          >
             {readMore ? "Read less" : "Read more"}
           </Button>
         </CardContent>
 
-        <CardActions sx={{ width: "100%", borderTop: "1px solid #12121217" }}>
+        <CardActions sx={{ width: "100%", borderTop: "1px solid rgba(255, 255, 255, 0.1)" }}>
           <Stack
             direction="row"
             alignItems="center"
@@ -111,6 +128,14 @@ const CardComponent = (props) => {
                 target="_blank"
                 component="a"
                 href={props.view}
+                sx={{
+                  backgroundColor: "#ffffff",
+                  color: "#000000",
+                  textTransform: "none",
+                  "&:hover": {
+                    backgroundColor: "rgba(255, 255, 255, 0.9)",
+                  },
+                }}
               >
                 View
               </Button>
@@ -119,12 +144,20 @@ const CardComponent = (props) => {
             {props.source && (
               <Button
                 size="small"
-                variant="contained"
+                variant="outlined"
                 component="a"
                 target="_blank"
                 href={props.source}
-                startIcon={<FaGithub style={{ color: "white" }} />}
-                sx={{ backgroundColor: "black" }}
+                startIcon={<FaGithub />}
+                sx={{
+                  borderColor: "rgba(255, 255, 255, 0.3)",
+                  color: "#ffffff",
+                  textTransform: "none",
+                  "&:hover": {
+                    borderColor: "rgba(255, 255, 255, 0.5)",
+                    backgroundColor: "rgba(255, 255, 255, 0.05)",
+                  },
+                }}
               >
                 Github
               </Button>
@@ -133,12 +166,20 @@ const CardComponent = (props) => {
 {props.ios && (
               <Button
                 size="small"
-                variant="contained"
+                variant="outlined"
                 component="a"
                 target="_blank"
                 href={props.ios}
-                startIcon={<FaApple style={{ color: "white" }} />}
-                sx={{ backgroundColor: "black" }}
+                startIcon={<FaApple />}
+                sx={{
+                  borderColor: "rgba(255, 255, 255, 0.3)",
+                  color: "#ffffff",
+                  textTransform: "none",
+                  "&:hover": {
+                    borderColor: "rgba(255, 255, 255, 0.5)",
+                    backgroundColor: "rgba(255, 255, 255, 0.05)",
+                  },
+                }}
               >
                 App Store
               </Button>
@@ -147,12 +188,20 @@ const CardComponent = (props) => {
 {props.android && (
               <Button
                 size="small"
-                variant="contained"
+                variant="outlined"
                 component="a"
                 target="_blank"
                 href={props.android}
-                startIcon={<FaAndroid style={{ color: "white" }} />}
-                sx={{ backgroundColor: "#0070A9" }}
+                startIcon={<FaAndroid />}
+                sx={{
+                  borderColor: "rgba(255, 255, 255, 0.3)",
+                  color: "#ffffff",
+                  textTransform: "none",
+                  "&:hover": {
+                    borderColor: "rgba(255, 255, 255, 0.5)",
+                    backgroundColor: "rgba(255, 255, 255, 0.05)",
+                  },
+                }}
               >
                 Google Play
               </Button>
@@ -165,8 +214,16 @@ const CardComponent = (props) => {
                 component="a"
                 target="_blank"
                 href={props.youtube}
-                startIcon={<FaYoutube style={{ color: "red" }} />}
-                sx={{ color: "black", borderColor: "black" }}
+                startIcon={<FaYoutube style={{ color: "#ff0000" }} />}
+                sx={{
+                  borderColor: "rgba(255, 255, 255, 0.3)",
+                  color: "#ffffff",
+                  textTransform: "none",
+                  "&:hover": {
+                    borderColor: "rgba(255, 255, 255, 0.5)",
+                    backgroundColor: "rgba(255, 255, 255, 0.05)",
+                  },
+                }}
               >
                 Youtube
               </Button>

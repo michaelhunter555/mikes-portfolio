@@ -13,7 +13,7 @@ import { styled } from "@mui/material/styles";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
 
 const SkillsBarDiv = styled("div")(({ theme }) => ({
-  backgroundColor: "#fff",
+  backgroundColor: "#000",
   border: "1px solid #adadad",
   padding: "1.5rem",
   borderRadius: "50px",

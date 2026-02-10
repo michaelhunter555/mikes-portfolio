@@ -24,38 +24,50 @@ const Education = () => {
         alignItems: "center",
         maxWidth: { xs: "100%", sm: "100%", md: "70%", lg: "50%" },
         margin: "5rem auto",
-        padding: "0 1rem",
+        padding: "4rem 1rem",
+        background: "#000000",
       }}
     >
-      <Typography variant="h2" color="text.secondary">
+      <Typography variant="h2" sx={{ color: "#ffffff", fontWeight: 600, marginBottom: 3 }}>
         Education
       </Typography>
-      <TableContainer component={Paper} sx={{ borderRadius: "15px" }}>
-        <Table>
+      <TableContainer 
+        component={Paper} 
+        sx={{ 
+          borderRadius: "12px",
+          background: "rgba(255, 255, 255, 0.02)",
+          border: "1px solid rgba(255, 255, 255, 0.1)",
+        }}
+      >
+        <Table sx={{
+          "& .MuiTableCell-root": {
+            borderColor: "rgba(255, 255, 255, 0.1)",
+          },
+        }}>
           <TableHead>
             <TableRow>
               <TableCell>
-                <Typography color="text.primary" variant="body1">
+                <Typography sx={{ color: "#ffffff", fontWeight: 600 }} variant="body1">
                   Level
                 </Typography>
               </TableCell>
               <TableCell>
-                <Typography color="text.primary" variant="body1">
+                <Typography sx={{ color: "#ffffff", fontWeight: 600 }} variant="body1">
                   University
                 </Typography>
               </TableCell>
               <TableCell>
-                <Typography color="text.primary" variant="body1">
+                <Typography sx={{ color: "#ffffff", fontWeight: 600 }} variant="body1">
                   Name
                 </Typography>
               </TableCell>
               <TableCell>
-                <Typography color="text.primary" variant="body1">
+                <Typography sx={{ color: "#ffffff", fontWeight: 600 }} variant="body1">
                   Discipline
                 </Typography>
               </TableCell>
               <TableCell>
-                <Typography color="text.primary" variant="body1">
+                <Typography sx={{ color: "#ffffff", fontWeight: 600 }} variant="body1">
                   Graduated
                 </Typography>
               </TableCell>
@@ -64,23 +76,23 @@ const Education = () => {
           <TableBody>
             <TableRow>
               <TableCell>
-                <Typography color="text.secondary">Bachelors</Typography>
+                <Typography sx={{ color: "rgba(255, 255, 255, 0.7)" }}>Bachelors</Typography>
               </TableCell>
               <TableCell>
                 <Avatar src={`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDxQRRjiG1vRq4IFxO85cs2Yt_vTXuFZwV5Q&s`}></Avatar>
               </TableCell>
               <TableCell>
-                <Typography color="text.secondary">
+                <Typography sx={{ color: "rgba(255, 255, 255, 0.7)" }}>
                   Western Governors University
                 </Typography>
               </TableCell>
               <TableCell>
-                <Typography color="text.secondary">
+                <Typography sx={{ color: "rgba(255, 255, 255, 0.7)" }}>
                   Software Engineering
                 </Typography>
               </TableCell>
               <TableCell>
-                <Typography color="text.secondary">
+                <Typography sx={{ color: "rgba(255, 255, 255, 0.7)" }}>
                   April 2025 - Present
                 </Typography>
               </TableCell>
@@ -88,42 +100,42 @@ const Education = () => {
 
             <TableRow>
               <TableCell>
-                <Typography color="text.secondary">Masters</Typography>
+                <Typography sx={{ color: "rgba(255, 255, 255, 0.7)" }}>Masters</Typography>
               </TableCell>
               <TableCell>
                 <Avatar
-                  src={`https://logo.clearbit.com/liverpool.ac.uk`}
+                  src={`https://www.liverpool.ac.uk/media/timetables-app-icon.jpg`}
                 ></Avatar>
               </TableCell>
               <TableCell>
-                <Typography color="text.secondary">
+                <Typography sx={{ color: "rgba(255, 255, 255, 0.7)" }}>
                   University of Liverpool
                 </Typography>
               </TableCell>
               <TableCell>
-                <Typography color="text.secondary">MBA</Typography>
+                <Typography sx={{ color: "rgba(255, 255, 255, 0.7)" }}>MBA</Typography>
               </TableCell>
               <TableCell>
-                <Typography color="text.secondary">Sept 2020</Typography>
+                <Typography sx={{ color: "rgba(255, 255, 255, 0.7)" }}>Sept 2020</Typography>
               </TableCell>
             </TableRow>
             <TableRow>
               <TableCell>
-                <Typography color="text.secondary">Bachelors</Typography>
+                <Typography sx={{ color: "rgba(255, 255, 255, 0.7)" }}>Bachelors</Typography>
               </TableCell>
               <TableCell>
-                <Avatar src={`https://logo.clearbit.com/temple.edu`}></Avatar>
+                <Avatar src={`https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Temple_T_logo.svg/960px-Temple_T_logo.svg.png`}></Avatar>
               </TableCell>
               <TableCell>
-                <Typography color="text.secondary">
+                <Typography sx={{ color: "rgba(255, 255, 255, 0.7)" }}>
                   Temple University
                 </Typography>
               </TableCell>
               <TableCell>
-                <Typography color="text.secondary">Communications</Typography>
+                <Typography sx={{ color: "rgba(255, 255, 255, 0.7)" }}>Communications</Typography>
               </TableCell>
               <TableCell>
-                <Typography color="text.secondary">May 2012</Typography>
+                <Typography sx={{ color: "rgba(255, 255, 255, 0.7)" }}>May 2012</Typography>
               </TableCell>
             </TableRow>
           </TableBody>

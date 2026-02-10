@@ -69,7 +69,7 @@ const CodeWars = () => {
               <Button
                 startIcon={<SiCodewars size={20} />}
                 size="small"
-                variant="outlined"
+                variant="contained"
                 onClick={showKataDataHandler}
                 sx={{ color: "#333", borderColor: "#333" }}
               >
@@ -82,7 +82,7 @@ const CodeWars = () => {
       {toggle && (
         <TableContainer sx={{ margin: "0 auto" }}>
           <Typography
-            sx={{ marginLeft: 2, fontSize: 11 }}
+            sx={{ marginLeft: 2, fontSize: 11, color: "#ffffff" }}
             variant="subtitle2"
             color="text.secondary"
           >
@@ -91,20 +91,20 @@ const CodeWars = () => {
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell>rank</TableCell>
-                <TableCell>color</TableCell>
-                <TableCell>points</TableCell>
-                <TableCell>score</TableCell>
+                <TableCell sx={{ color: "#ffffff" }}>rank</TableCell>
+                <TableCell sx={{ color: "#ffffff" }}>color</TableCell>
+                <TableCell sx={{ color: "#ffffff" }}>points</TableCell>
+                <TableCell sx={{ color: "#ffffff" }}>score</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {user && (
                 <TableRow>
-                  <TableCell>
+                  <TableCell sx={{ color: "#ffffff" }}>
                     {Math.abs(user.ranks.languages.javascript.rank)}
                   </TableCell>
-                  <TableCell>{user.ranks.languages.javascript.color}</TableCell>
-                  <TableCell>{user.ranks.languages.javascript.score}</TableCell>
+                  <TableCell sx={{ color: "#ffffff" }}>{user.ranks.languages.javascript.color}</TableCell>
+                  <TableCell sx={{ color: "#ffffff" }}>{user.ranks.languages.javascript.score}</TableCell>
                   <TableCell>
                     <Box
                       sx={{
