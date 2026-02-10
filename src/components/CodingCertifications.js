@@ -1,8 +1,6 @@
 import React from "react";
 
 import { Box, Chip, Stack, styled, Typography } from "@mui/material";
-
-import { supplementalChips } from "../utils/supplementalChips";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const StyledStackContainer = styled(Stack)(({ theme }) => ({
@@ -13,9 +11,6 @@ const StyledStackContainer = styled(Stack)(({ theme }) => ({
     flexWrap: "wrap",
     gap: "5px",
   },
-}));
-const StyledChip = styled(Chip)(({ theme }) => ({
-  [theme.breakpoints.down("sm")]: {},
 }));
 
 const CodingCertifications = () => {

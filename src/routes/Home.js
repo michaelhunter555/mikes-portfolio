@@ -7,7 +7,6 @@ import { useTheme } from "@mui/material/styles";
 import { styled } from "@mui/material/styles";
 
 import About from "../components/About";
-import AdditionalSkills from "../components/AdditionalSkills";
 import CodingJourney from "../components/CodingJourney";
 import Education from "../components/Education";
 import Footer from "../components/Footer";

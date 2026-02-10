@@ -12,7 +12,6 @@ import { TbBrandNextjs } from "react-icons/tb";
 
 import ajarnjobs from "../assets/ajarnjobs_dash.png";
 import queryLevel from "../assets/create-tiers-light.svg";
-import barberApp from '../assets/barber_app_home_phones.png'
 import nextFade from '../assets/nextfade.png'
 
 /**Simpler way to store projects
